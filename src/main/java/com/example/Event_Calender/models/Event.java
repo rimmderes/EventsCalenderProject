@@ -46,8 +46,7 @@ import java.util.List;
         @JsonIgnoreProperties({"events"})
         private List<User> users;
 
-        public Event(long id, String eventName, String eventDescription, String eventLocation, LocalTime startTime, LocalTime endTime, LocalDate date) {
-            this.id = id;
+        public Event(String eventName, String eventDescription, String eventLocation, LocalTime startTime, LocalTime endTime, LocalDate date) {
             this.eventName = eventName;
             this.eventDescription = eventDescription;
             this.eventLocation = eventLocation;
