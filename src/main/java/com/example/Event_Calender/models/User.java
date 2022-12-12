@@ -29,8 +29,7 @@ public class User {
     @JsonIgnoreProperties({"users"})
     private ArrayList<Event> events;
 
-    public User(long id, String name, String emailAddress) {
-        this.id = id;
+    public User(String name, String emailAddress) {
         this.name = name;
         this.emailAddress = emailAddress;
         this.events = new ArrayList<>();
@@ -38,6 +37,14 @@ public class User {
 
     public User(){}
 
+    // METHOD
+
+    public void addEvent(Event event) {
+        this.events.add(event);
+    }
+
+
+    //GETTERS AND SETTERS
 
     public long getId() {
         return id;
