@@ -6,6 +6,7 @@ import com.example.Event_Calender.repositories.EventRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -36,7 +37,7 @@ public class EventService {
         // instantiating a user utilising their id
         User user = userService.getUserById(userId);
         // instantiating users into getUsers event method
-        List <User> users = event.getUsers();
+        List<User> users = event.getUsers();
         users.add(user);
         // setting users with events
         event.setUsers(users);
