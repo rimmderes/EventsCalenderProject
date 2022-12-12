@@ -1,5 +1,6 @@
 package com.example.Event_Calender.controllers;
 
+import com.example.Event_Calender.models.BookingDTO;
 import com.example.Event_Calender.models.Event;
 import com.example.Event_Calender.services.EventService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,6 +34,13 @@ public class EventController {
     public ResponseEntity<Event> addNewEvent(@RequestBody Event event) {
         Event newEvent = eventService.addNewEvent(event);
         return new ResponseEntity<>(newEvent, HttpStatus.CREATED);
+    }
+
+    @PatchMapping(value = "/{id}")
+    public ResponseEntity<Event> addUserToEvent(@PathVariable long id, @RequestBody BookingDTO bookingDTO){
+        long userId = bookingDTO.getUserId();
+        Event updatedEvent = eventService.addUserToEvent(id, userId);
+        return new ResponseEntity<>(updatedEvent, HttpStatus.OK);
     }
 
     @DeleteMapping(value = "/{id}")
