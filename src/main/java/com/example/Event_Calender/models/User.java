@@ -3,16 +3,18 @@ package com.example.Event_Calender.models;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 @Entity
 @Table (name = "users")
 public class User {
+
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    @Column (name = "name")
+    @Column(name = "name")
+
     private String name;
     @Column (name = "emailAddress")
     private String emailAddress;
