@@ -39,11 +39,11 @@ public class EventController {
         return new ResponseEntity<>(newEvent, HttpStatus.CREATED);
     }
 
-    @PutMapping(value = "/{id}")
-    public ResponseEntity<?> updateEvent(@RequestBody Event event, @PathVariable Long id) {
+    @PatchMapping(value = "/{id}")
+    public ResponseEntity<?> updateEvent(@RequestBody BookingDTO bookingDTO, @PathVariable Long id) {
         try {
-            eventService.addUserToEvent(event, id);
-            return new ResponseEntity<>(event, HttpStatus.OK);
+            eventService.addUserToEvent(bookingDTO, id);
+            return new ResponseEntity<>(bookingDTO, HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<>(e.getMessage(), HttpStatus.NO_CONTENT);
         }

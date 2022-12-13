@@ -1,5 +1,6 @@
 package com.example.Event_Calender.services;
 
+import com.example.Event_Calender.models.BookingDTO;
 import com.example.Event_Calender.models.Event;
 import com.example.Event_Calender.models.User;
 import com.example.Event_Calender.repositories.EventRepository;
@@ -32,20 +33,28 @@ public class EventService {
         return event;
     }
 
-    public void addUserToEvent(Event event, Long id) throws Exception {
+    public void addUserToEvent(BookingDTO bookingDTO, Long id) throws Exception {
+        Event event = eventRepository.findById(id).get();
+
         if (event.getCapacity() <= 0) {
             throw new Exception("Sorry, event is full.");
         }
-        Event addUserToEvent = eventRepository.findById(id).get();
-        addUserToEvent.setEventName(event.getEventName());
-        addUserToEvent.setEventDescription(event.getEventDescription());
-        addUserToEvent.setEventLocation(event.getEventLocation());
-        addUserToEvent.setStartTime(event.getStartTime());
-        addUserToEvent.setEndTime(event.getEndTime());
-        addUserToEvent.setDate(event.getDate());
-        addUserToEvent.setUsers(event.getUsers());
-        eventRepository.save(addUserToEvent);
-        addUserToEvent.setCapacity(addUserToEvent.getCapacity()-1);
+
+        // get id out of booking dto
+        // find appropriate user (userService.findById)
+        // once hve that user must have event.addByUser
+        // update capacity - can work out with how many people are in the event
+        // eventRepository.save()
+
+        eventRepository.save(event);
+
+//        if (addUserToEvent.getCapacity() > 0) {
+//            addUserToEvent.setCapacity(addUserToEvent.getCapacity()-1);
+//            eventRepository.save(addUserToEvent);
+//        } else {
+//            throw new Exception("Sorry, event is full.");
+//        }
+
     }
 
 //    public Event addUserToEvent(long eventId, long userId) {

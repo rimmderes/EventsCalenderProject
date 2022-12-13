@@ -32,7 +32,7 @@ public class DataLoader implements ApplicationRunner {
         // EVENTS
         // PAINT N SIP
         Event paintNSip = new Event("Paint N Sip", "Paint and Drink together", "Shoreditch",
-                LocalTime.of(19,00,00), LocalTime.of(22,00,00), LocalDate.of(2023,01,06), 2);
+                LocalTime.of(19,00,00), LocalTime.of(22,00,00), LocalDate.of(2023,01,06), 3);
         eventRepository.save(paintNSip);
 
         User rebecca = new User("Rebecca", "rebeccasol@gmail.com");
