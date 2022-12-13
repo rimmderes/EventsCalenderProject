@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table (name = "users")
@@ -27,7 +28,7 @@ public class User {
     )
 
     @JsonIgnoreProperties({"users"})
-    private ArrayList<Event> events;
+    private List<Event> events;
 
     public User(String name, String emailAddress) {
         this.name = name;
@@ -70,11 +71,11 @@ public class User {
         this.emailAddress = emailAddress;
     }
 
-    public ArrayList<Event> getEvents() {
+    public List<Event> getEvents() {
         return events;
     }
 
-    public void setEvents(ArrayList<Event> events) {
+    public void setEvents(List<Event> events) {
         this.events = events;
     }
 }
