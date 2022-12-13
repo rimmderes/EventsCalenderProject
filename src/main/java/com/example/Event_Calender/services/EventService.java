@@ -31,19 +31,31 @@ public class EventService {
         return event;
     }
 
-    public Event addUserToEvent(long eventId, long userId) {
-        // instantiating an event that already exists in the database
-        Event event = eventRepository.findById(eventId).get();
-        // instantiating a user utilising their id
-        User user = userService.getUserById(userId);
-        // instantiating users into getUsers event method
-        List<User> users = event.getUsers();
-        users.add(user);
-        // setting users with events
-        event.setUsers(users);
-        eventRepository.save(event);
-        return event;
+    public void addUserToEvent(Event event, Long id) {
+        Event addUserToEvent = eventRepository.findById(id).get();
+        addUserToEvent.setEventName(event.getEventName());
+        addUserToEvent.setEventDescription(event.getEventDescription());
+        addUserToEvent.setEventLocation(event.getEventLocation());
+        addUserToEvent.setStartTime(event.getStartTime());
+        addUserToEvent.setEndTime(event.getEndTime());
+        addUserToEvent.setDate(event.getDate());
+        addUserToEvent.setUsers(event.getUsers());
+        eventRepository.save(addUserToEvent);
     }
+
+//    public Event addUserToEvent(long eventId, long userId) {
+//        // instantiating an event that already exists in the database
+//        Event event = eventRepository.findById(eventId).get();
+//        // instantiating a user utilising their id
+//        User user = userService.getUserById(userId);
+//        // instantiating users into getUsers event method
+//        List<User> users = event.getUsers();
+//        users.add(user);
+//        // setting users with events
+//        event.setUsers(users);
+//        eventRepository.save(event);
+//        return event;
+//    }
 
     public void deleteEvent(long id) {
         eventRepository.deleteById(id);

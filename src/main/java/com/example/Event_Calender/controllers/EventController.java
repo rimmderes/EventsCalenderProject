@@ -36,17 +36,24 @@ public class EventController {
         return new ResponseEntity<>(newEvent, HttpStatus.CREATED);
     }
 
-    @PatchMapping(value = "/{id}")
-    public ResponseEntity<Event> addUserToEvent(@PathVariable long id, @RequestBody BookingDTO bookingDTO){
-        long userId = bookingDTO.getUserId();
-        Event updatedEvent = eventService.addUserToEvent(id, userId);
-        return new ResponseEntity<>(updatedEvent, HttpStatus.OK);
+    @PutMapping(value = "/{id}")
+    public ResponseEntity<Event> updateEvent(@RequestBody Event event, @PathVariable Long id) {
+        eventService.addUserToEvent(event, id);
+        return new ResponseEntity<>(event, HttpStatus.OK);
     }
+
 
     @DeleteMapping(value = "/{id}")
     public ResponseEntity cancelEvent(@PathVariable long id) {
         eventService.deleteEvent(id);
         return new ResponseEntity<>(null, HttpStatus.NO_CONTENT);
     }
+
+//    @PatchMapping(value = "/{id}")
+//    public ResponseEntity<Event> addUserToEvent(@PathVariable long id, @RequestBody BookingDTO bookingDTO) {
+//        long userId = bookingDTO.getUserId();
+//        Event updatedEvent = eventService.addUserToEvent(id, userId);
+//        return new ResponseEntity<>(updatedEvent, HttpStatus.OK);
+//    }
 
 }
