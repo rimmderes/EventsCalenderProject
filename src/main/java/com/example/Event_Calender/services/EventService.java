@@ -6,6 +6,7 @@ import com.example.Event_Calender.repositories.EventRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -59,6 +60,10 @@ public class EventService {
 
     public void deleteEvent(long id) {
         eventRepository.deleteById(id);
+    }
+
+    public List<Event> findAllEventsByDate(LocalDate date) {
+        return eventRepository.findByDateEquals(date);
     }
 
 

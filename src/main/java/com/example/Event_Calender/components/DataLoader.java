@@ -1,6 +1,9 @@
 package com.example.Event_Calender.components;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> rebeccaBranch
 import com.example.Event_Calender.models.Event;
 import com.example.Event_Calender.models.User;
 import com.example.Event_Calender.repositories.EventRepository;
