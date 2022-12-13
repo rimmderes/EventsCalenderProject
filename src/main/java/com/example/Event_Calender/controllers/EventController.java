@@ -4,11 +4,14 @@ import com.example.Event_Calender.models.BookingDTO;
 import com.example.Event_Calender.models.Event;
 import com.example.Event_Calender.services.EventService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.persistence.GeneratedValue;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.List;
 
 @RestController
@@ -18,11 +21,11 @@ public class EventController {
     @Autowired
     EventService eventService;
 
-    @GetMapping
-    public ResponseEntity<List<Event>> getAllEvents() {
-        List<Event> events = eventService.getAllEvents();
-        return new ResponseEntity<>(events, HttpStatus.OK);
-    }
+//    @GetMapping
+//    public ResponseEntity<List<Event>> getAllEvents() {
+//        List<Event> events = eventService.getAllEvents();
+//        return new ResponseEntity<>(events, HttpStatus.OK);
+//    }
 
     @GetMapping(value = "/{id}")
     public ResponseEntity<Event> getEventById(@PathVariable long id) {
@@ -48,5 +51,21 @@ public class EventController {
         eventService.deleteEvent(id);
         return new ResponseEntity<>(null, HttpStatus.NO_CONTENT);
     }
+
+    // Extension
+    // Finding events by Date
+    @GetMapping
+    public ResponseEntity<List<Event>> getFilteredEventByDate(
+            @RequestParam(required = false, name = "date")
+            @DateTimeFormat(iso=DateTimeFormat.ISO.DATE)
+            LocalDate date
+            ) { if(date != null) {
+        return new ResponseEntity<>(eventService.findAllEventsByDate(date), HttpStatus.OK);
+    }
+        return new ResponseEntity<>(eventService.getAllEvents(), HttpStatus.OK);
+
+    }
+
+
 
 }
