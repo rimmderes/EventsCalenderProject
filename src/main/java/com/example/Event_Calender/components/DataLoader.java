@@ -1,6 +1,5 @@
 package com.example.Event_Calender.components;
 
-public class DataLoader {
 
 import com.example.Event_Calender.models.Event;
 import com.example.Event_Calender.models.User;
