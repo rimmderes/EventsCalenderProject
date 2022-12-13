@@ -31,7 +31,8 @@ public class DataLoader implements ApplicationRunner {
 
         // EVENTS
         // PAINT N SIP
-        Event paintNSip = new Event("Paint N Sip", "Paint and Drink together", "Shoreditch", LocalTime.of(19,00,00), LocalTime.of(22,00,00), LocalDate.of(2023,01,06));
+        Event paintNSip = new Event("Paint N Sip", "Paint and Drink together", "Shoreditch",
+                LocalTime.of(19,00,00), LocalTime.of(22,00,00), LocalDate.of(2023,01,06), 2);
         eventRepository.save(paintNSip);
 
         User rebecca = new User("Rebecca", "rebeccasol@gmail.com");
@@ -43,7 +44,8 @@ public class DataLoader implements ApplicationRunner {
         userRepository.save(rimm);
 
         // PIZZA MAKING
-        Event pizzaMaking = new Event("Pizza Making", "Making Pizza from scratch", "Covent Garden", LocalTime.of(15,00,00), LocalTime.of(18,0,0), LocalDate.of(2022, 12, 16));
+        Event pizzaMaking = new Event("Pizza Making", "Making Pizza from scratch", "Covent Garden",
+                LocalTime.of(15,00,00), LocalTime.of(18,0,0), LocalDate.of(2022, 12, 16), 5);
         eventRepository.save(pizzaMaking);
 
         User harry = new User("Harry", "harrym@gmail.com");
@@ -55,7 +57,8 @@ public class DataLoader implements ApplicationRunner {
         userRepository.save(khalil);
 
         // LONDON MOTOR SHOW
-        Event londonMotorShow = new Event("LDN Motor Show", "Displaying the finest cars around", "ExCel London", LocalTime.of(10,00,00), LocalTime.of(18, 30, 00), LocalDate.of(2023, 02, 27));
+        Event londonMotorShow = new Event("LDN Motor Show", "Displaying the finest cars around", "ExCel London",
+                LocalTime.of(10,00,00), LocalTime.of(18, 30, 00), LocalDate.of(2023, 02, 27),2000);
         eventRepository.save(londonMotorShow);
 
         User zsolt = new User("Zsolt", "zsolt@gmail.com");

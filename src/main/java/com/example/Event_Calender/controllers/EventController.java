@@ -40,14 +40,19 @@ public class EventController {
     }
 
     @PutMapping(value = "/{id}")
-    public ResponseEntity<Event> updateEvent(@RequestBody Event event, @PathVariable Long id) {
-        eventService.addUserToEvent(event, id);
-        return new ResponseEntity<>(event, HttpStatus.OK);
+    public ResponseEntity<?> updateEvent(@RequestBody Event event, @PathVariable Long id) {
+        try {
+            eventService.addUserToEvent(event, id);
+            return new ResponseEntity<>(event, HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity<>(e.getMessage(), HttpStatus.NO_CONTENT);
+        }
+
     }
 
 
     @DeleteMapping(value = "/{id}")
-    public ResponseEntity cancelEvent(@PathVariable long id) {
+    public ResponseEntity<?> cancelEvent(@PathVariable long id) {
         eventService.deleteEvent(id);
         return new ResponseEntity<>(null, HttpStatus.NO_CONTENT);
     }

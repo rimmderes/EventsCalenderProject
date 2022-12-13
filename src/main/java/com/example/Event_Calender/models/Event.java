@@ -36,6 +36,9 @@ import java.util.List;
         @Column
         private LocalDate date;
 
+        @Column
+        private int capacity;
+
         @ManyToMany
         @JoinTable(
                 name = "users_events",
@@ -46,7 +49,7 @@ import java.util.List;
         @JsonIgnoreProperties({"events"})
         private List<User> users;
 
-        public Event(String eventName, String eventDescription, String eventLocation, LocalTime startTime, LocalTime endTime, LocalDate date) {
+        public Event(String eventName, String eventDescription, String eventLocation, LocalTime startTime, LocalTime endTime, LocalDate date, int capacity) {
             this.eventName = eventName;
             this.eventDescription = eventDescription;
             this.eventLocation = eventLocation;
@@ -54,6 +57,7 @@ import java.util.List;
             this.endTime = endTime;
             this.date = date;
             this.users = new ArrayList<>();
+            this.capacity = capacity;
         }
 
         public Event() {
@@ -63,7 +67,15 @@ import java.util.List;
         // GETTERS AND SETTERS
 
 
-        public long getId() {
+    public int getCapacity() {
+        return capacity;
+    }
+
+    public void setCapacity(int capacity) {
+        this.capacity = capacity;
+    }
+
+    public long getId() {
             return id;
         }
 

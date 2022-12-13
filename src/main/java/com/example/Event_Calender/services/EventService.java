@@ -32,7 +32,10 @@ public class EventService {
         return event;
     }
 
-    public void addUserToEvent(Event event, Long id) {
+    public void addUserToEvent(Event event, Long id) throws Exception {
+        if (event.getCapacity() <= 0) {
+            throw new Exception("Sorry, event is full.");
+        }
         Event addUserToEvent = eventRepository.findById(id).get();
         addUserToEvent.setEventName(event.getEventName());
         addUserToEvent.setEventDescription(event.getEventDescription());
@@ -42,6 +45,7 @@ public class EventService {
         addUserToEvent.setDate(event.getDate());
         addUserToEvent.setUsers(event.getUsers());
         eventRepository.save(addUserToEvent);
+        addUserToEvent.setCapacity(addUserToEvent.getCapacity()-1);
     }
 
 //    public Event addUserToEvent(long eventId, long userId) {
