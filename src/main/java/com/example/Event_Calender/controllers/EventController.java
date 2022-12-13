@@ -52,14 +52,13 @@ public class EventController {
         return new ResponseEntity<>(null, HttpStatus.NO_CONTENT);
     }
 
-<<<<<<< HEAD
+
 //    @PatchMapping(value = "/{id}")
 //    public ResponseEntity<Event> addUserToEvent(@PathVariable long id, @RequestBody BookingDTO bookingDTO) {
 //        long userId = bookingDTO.getUserId();
 //        Event updatedEvent = eventService.addUserToEvent(id, userId);
 //        return new ResponseEntity<>(updatedEvent, HttpStatus.OK);
 //    }
-=======
     // Extension
     // Finding events by Date
     @GetMapping
@@ -75,6 +74,6 @@ public class EventController {
     }
 
 
->>>>>>> rebeccaBranch
+
 
 }
