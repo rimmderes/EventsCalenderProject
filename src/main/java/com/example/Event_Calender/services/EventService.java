@@ -32,15 +32,6 @@ public class EventService {
         eventRepository.save(event);
         return event;
     }
-//    public Flight addPassengerToFlight(long flightId, long passengerId){
-//        Flight flight = flightRepository.findById(flightId).get();
-//        Passenger passenger = passengerService.getPassengerById(passengerId);
-//        List<Passenger> passengers = flight.getPassengers();
-//        passengers.add(passenger);
-//        flight.setPassengers(passengers);
-//        flightRepository.save(flight);
-//        return flight;
-//    }
 
     public void addUserToEvent(BookingDTO bookingDTO, Long id) throws Exception {
         Event event = eventRepository.findById(id).get();
@@ -57,28 +48,9 @@ public class EventService {
         // eventRepository.save()
         eventRepository.save(event);
 
-//        if (addUserToEvent.getCapacity() > 0) {
-//            addUserToEvent.setCapacity(addUserToEvent.getCapacity()-1);
-//            eventRepository.save(addUserToEvent);
-//        } else {
-//            throw new Exception("Sorry, event is full.");
-//        }
-
     }
 
-//    public Event addUserToEvent(long eventId, long userId) {
-//        // instantiating an event that already exists in the database
-//        Event event = eventRepository.findById(eventId).get();
-//        // instantiating a user utilising their id
-//        User user = userService.getUserById(userId);
-//        // instantiating users into getUsers event method
-//        List<User> users = event.getUsers();
-//        users.add(user);
-//        // setting users with events
-//        event.setUsers(users);
-//        eventRepository.save(event);
-//        return event;
-//    }
+
 
     public void deleteEvent(long id) {
         eventRepository.deleteById(id);
