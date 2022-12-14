@@ -45,7 +45,7 @@ public class EventController {
             eventService.addUserToEvent(bookingDTO, id);
             return new ResponseEntity<>(bookingDTO, HttpStatus.OK);
         } catch (Exception e) {
-            return new ResponseEntity<>(e.getMessage(), HttpStatus.NO_CONTENT);
+            return new ResponseEntity<>(e.getMessage(), HttpStatus.BAD_REQUEST);
         }
 
     }

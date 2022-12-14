@@ -64,6 +64,10 @@ import java.util.List;
 
         }
 
+        public void addUser(User user){
+            this.users.add(user);
+        }
+
         // GETTERS AND SETTERS
 
 

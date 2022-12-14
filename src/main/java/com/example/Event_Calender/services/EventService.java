@@ -32,20 +32,29 @@ public class EventService {
         eventRepository.save(event);
         return event;
     }
+//    public Flight addPassengerToFlight(long flightId, long passengerId){
+//        Flight flight = flightRepository.findById(flightId).get();
+//        Passenger passenger = passengerService.getPassengerById(passengerId);
+//        List<Passenger> passengers = flight.getPassengers();
+//        passengers.add(passenger);
+//        flight.setPassengers(passengers);
+//        flightRepository.save(flight);
+//        return flight;
+//    }
 
     public void addUserToEvent(BookingDTO bookingDTO, Long id) throws Exception {
         Event event = eventRepository.findById(id).get();
-
-        if (event.getCapacity() <= 0) {
+        // check if the there is space for new user
+        if (event.getCapacity() <= event.getUsers().size()) {
             throw new Exception("Sorry, event is full.");
         }
-
         // get id out of booking dto
+        long userId = bookingDTO.getUserId();
         // find appropriate user (userService.findById)
+        User user = userService.getUserById(userId);
         // once hve that user must have event.addByUser
-        // update capacity - can work out with how many people are in the event
+        event.addUser(user);
         // eventRepository.save()
-
         eventRepository.save(event);
 
 //        if (addUserToEvent.getCapacity() > 0) {
