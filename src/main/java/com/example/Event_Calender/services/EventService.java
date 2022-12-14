@@ -8,7 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
+import java.time.Period;
+import java.time.temporal.ChronoUnit;
 import java.util.List;
 
 @Service
@@ -47,6 +48,14 @@ public class EventService {
         event.addUser(user);
         // eventRepository.save()
         eventRepository.save(event);
+
+    }
+
+    public long daysUntilEvent(LocalDate date){
+//        Period period = Period.between(LocalDate.now(), date);
+//        return String.format(period.getDays())
+        long daysUntil = ChronoUnit.DAYS.between(LocalDate.now(), date);
+        return daysUntil;
 
     }
 

@@ -12,7 +12,10 @@ import org.springframework.web.bind.annotation.*;
 import javax.persistence.GeneratedValue;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.Period;
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/events")
@@ -57,13 +60,6 @@ public class EventController {
         return new ResponseEntity<>(null, HttpStatus.NO_CONTENT);
     }
 
-
-//    @PatchMapping(value = "/{id}")
-//    public ResponseEntity<Event> addUserToEvent(@PathVariable long id, @RequestBody BookingDTO bookingDTO) {
-//        long userId = bookingDTO.getUserId();
-//        Event updatedEvent = eventService.addUserToEvent(id, userId);
-//        return new ResponseEntity<>(updatedEvent, HttpStatus.OK);
-//    }
     // Extension
     // Finding events by Date
     @GetMapping
@@ -77,6 +73,19 @@ public class EventController {
         return new ResponseEntity<>(eventService.getAllEvents(), HttpStatus.OK);
 
     }
+// Finding out how many days to an event
+
+    @GetMapping(value = "/days-until/{id}")
+    public ResponseEntity<?> getDaysUntilEventById(@PathVariable Optional<Long> id) {
+        if(id.isEmpty()) {
+            return new ResponseEntity<>("this route requires an id", HttpStatus.BAD_REQUEST);
+        }
+        long daysUntilEvent = eventService.daysUntilEvent(eventService.getEventById(id.get()).getDate());
+        return new ResponseEntity<>(daysUntilEvent, HttpStatus.OK);
+    }
+
+
+
 
 
 
