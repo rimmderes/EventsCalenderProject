@@ -18,9 +18,12 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
+// create route mapping
 @RequestMapping("/events")
 public class EventController {
 
+    // call on methods from eventService class (bean)
+    // no need to instantiate below object
     @Autowired
     EventService eventService;
 
@@ -31,7 +34,7 @@ public class EventController {
         return new ResponseEntity<>(event, HttpStatus.OK);
     }
 
-    // adding a new event
+    // adding a new event using body in postman
     @PostMapping
     public ResponseEntity<Event> addNewEvent(@RequestBody Event event) {
         Event newEvent = eventService.addNewEvent(event);
@@ -59,31 +62,36 @@ public class EventController {
     }
 
     // Extension
-    // Finding events by Date
+
+    /// Finding all events by Date, if not, find all
     @GetMapping
     public ResponseEntity<List<Event>> getFilteredEventByDate(
+            // create a parameter for method
             @RequestParam(required = false, name = "date")
+            // express calendar date in standard format in URL
             @DateTimeFormat(iso=DateTimeFormat.ISO.DATE)
             LocalDate date
-            ) { if(date != null) {
-        return new ResponseEntity<>(eventService.findAllEventsByDate(date), HttpStatus.OK);
+            ) { if(date != null) {        // != "not equal to"
+                // get event by date request response
+                return new ResponseEntity<>(eventService.findAllEventsByDate(date), HttpStatus.OK);
     }
+        // get all events request response
         return new ResponseEntity<>(eventService.getAllEvents(), HttpStatus.OK);
 
     }
-// Finding out how many days to an event
 
+
+    // Finding out how many days to an event
     @GetMapping(value = "/days-until/{id}")
-    public ResponseEntity<?> getDaysUntilEventById(@PathVariable Optional<Long> id) {
-        if(id.isEmpty()) {
+    public ResponseEntity<?> getDaysUntilEventById(@PathVariable Optional<Long> id) {    // use of optional as null is not appropriate to use in if statement
+        if (id.isEmpty()) {
+            // NEED TO COME BACK TO ----> THROW EXCEPTION HERE
             return new ResponseEntity<>("this route requires an id", HttpStatus.BAD_REQUEST);
         }
-        String daysUntilEvent = eventService.daysUntilEvent(eventService.getEventById(id.get()).getDate());
-        return new ResponseEntity<>(daysUntilEvent, HttpStatus.OK);
-    }
-
-
-
+            // get days until event using event id
+            String daysUntilEvent = eventService.daysUntilEvent(eventService.getEventById(id.get()).getDate());
+            return new ResponseEntity<>(daysUntilEvent, HttpStatus.OK);
+        }
 
 
 

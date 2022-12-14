@@ -10,11 +10,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
+// entity defines class can be mapped to a table
+
 @Table(name = "events")
+// allows to specify details of the table
 
     public class Event {
 
+        // indicate id is the primary key of the current entity
         @Id
+        // increment value of id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
         private long id;
 
@@ -39,15 +44,20 @@ import java.util.List;
         @Column
         private int capacity;
 
+
+        // create many-to-many relationship table
         @ManyToMany
         @JoinTable(
                 name = "users_events",
+                // create primary key column
                 joinColumns = {@JoinColumn(name = "event_id", nullable = false)},
+                // create foreign key column
                 inverseJoinColumns = {@JoinColumn(name = "user_id", nullable = false)}
         )
 
+        // ignore other event properties from serialisation
         @JsonIgnoreProperties({"events"})
-        //
+
 
         private List<User> users;
 
@@ -66,6 +76,9 @@ import java.util.List;
 
         }
 
+        // Method
+
+        // add new user
         public void addUser(User user){
             this.users.add(user);
         }

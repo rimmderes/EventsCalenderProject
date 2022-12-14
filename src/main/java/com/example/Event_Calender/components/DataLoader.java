@@ -13,7 +13,7 @@ import java.sql.Time;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
-@Component
+@Component  // extends bean
 public class DataLoader implements ApplicationRunner {
 
     @Autowired
@@ -22,10 +22,11 @@ public class DataLoader implements ApplicationRunner {
     @Autowired
     EventRepository eventRepository;
 
+    // instantiate dataLoader
     public DataLoader() {
-
     }
 
+    // inputting event and user information into database
     @Override
     public void run(ApplicationArguments args) throws Exception {
 

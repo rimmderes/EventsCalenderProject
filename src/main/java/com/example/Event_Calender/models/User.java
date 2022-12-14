@@ -27,6 +27,7 @@ public class User {
             inverseJoinColumns = {@JoinColumn(name = "event_id", nullable = false)}
     )
 
+    // ignore other user properties from serialisation
     @JsonIgnoreProperties({"users"})
     private List<Event> events;
 
@@ -40,6 +41,7 @@ public class User {
 
     // METHOD
 
+    // add new event
     public void addEvent(Event event) {
         this.events.add(event);
     }

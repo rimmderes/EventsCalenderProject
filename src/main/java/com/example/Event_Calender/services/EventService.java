@@ -21,52 +21,62 @@ public class EventService {
     @Autowired
     UserService userService;
 
+    // create method to get all events in the event repository
     public List<Event> getAllEvents(){
         return eventRepository.findAll();
     }
 
+    // get events using their ids
     public Event getEventById(long id) {
         return eventRepository.findById(id).get();
     }
 
+    // add a new event and save to event repository
     public Event addNewEvent(Event event){
         eventRepository.save(event);
         return event;
     }
 
+    // METHODS
+
     // adding a new user to an event
-    // exception = create a message which is a human-readable error description
     public void addUserToEvent(BookingDTO bookingDTO, Long id) throws Exception {
+        // exception = create a message which is a human-readable error description
         // instantiate an existing event
+        // find an event id in the event repository and 'get' it
         Event event = eventRepository.findById(id).get();
-        // check if the there is space for new user
+        // check if there is space for new user
         if (event.getCapacity() <= event.getUsers().size()) {
             throw new Exception (String.format(("Sorry, event is full.")));
         }
-        // get id out of booking dto
+        // get user id out of booking dto
         long userId = bookingDTO.getUserId();
-        // find appropriate user
+        // find appropriate user via id
         User user = userService.getUserById(userId);
         // then add user to event
         event.addUser(user);
-        // eventRepository.save()
+        // save event with new user to the event repository
         eventRepository.save(event);
 
     }
 
+
+    // create method to show countdown until event begins
     public String daysUntilEvent(LocalDate date){
+        // return date difference between two dates in years, months, days
         Period period = Period.between(LocalDate.now(), date);
-        // 00 years 2 months and 2 days until the event
+        // show countdown until the event to user
         return String.format("%s years, %s months and %s days until the event!", period.getYears(), period.getMonths(), period.getDays());
 
     }
 
 
-
+    // delete an event from the repository using its id
     public void deleteEvent(long id) {
         eventRepository.deleteById(id);
     }
 
+    // find an event by date
     public List<Event> findAllEventsByDate(LocalDate date) {
         return eventRepository.findByDateEquals(date);
     }
