@@ -21,18 +21,21 @@ public class UserController {
     @Autowired
     private UserRepository userRepository;
 
-    @GetMapping // creates 'Get' request.
+    // get all users
+    @GetMapping
     public ResponseEntity<List<User>> getAllUsers(){
         List<User> users = userService.getAllUsers();
         return new ResponseEntity<>(users, HttpStatus.OK);
     }
 
+    // get all users via id
     @GetMapping (value = "/{id}")
     public ResponseEntity<User> getUserById(@PathVariable long id){
         User user = userService.getUserById(id);
         return new ResponseEntity<>(user, HttpStatus.OK);
     }
 
+    // add a new user
     @PostMapping
     public  ResponseEntity<User> addNewUser(@RequestBody User user){
         User savedUser = userService.addNewUser(user);

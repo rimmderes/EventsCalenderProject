@@ -47,6 +47,8 @@ import java.util.List;
         )
 
         @JsonIgnoreProperties({"events"})
+        //
+
         private List<User> users;
 
         public Event(String eventName, String eventDescription, String eventLocation, LocalTime startTime, LocalTime endTime, LocalDate date, int capacity) {

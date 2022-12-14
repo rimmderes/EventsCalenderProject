@@ -24,23 +24,21 @@ public class EventController {
     @Autowired
     EventService eventService;
 
-//    @GetMapping
-//    public ResponseEntity<List<Event>> getAllEvents() {
-//        List<Event> events = eventService.getAllEvents();
-//        return new ResponseEntity<>(events, HttpStatus.OK);
-//    }
-
+    // getting event via id
     @GetMapping(value = "/{id}")
     public ResponseEntity<Event> getEventById(@PathVariable long id) {
         Event event = eventService.getEventById(id);
         return new ResponseEntity<>(event, HttpStatus.OK);
     }
 
+    // adding a new event
     @PostMapping
     public ResponseEntity<Event> addNewEvent(@RequestBody Event event) {
         Event newEvent = eventService.addNewEvent(event);
         return new ResponseEntity<>(newEvent, HttpStatus.CREATED);
     }
+
+    // adding user to event whilst limited to capacity
 
     @PatchMapping(value = "/{id}")
     public ResponseEntity<?> updateEvent(@RequestBody BookingDTO bookingDTO, @PathVariable Long id) {
@@ -53,7 +51,7 @@ public class EventController {
 
     }
 
-
+    // remove event
     @DeleteMapping(value = "/{id}")
     public ResponseEntity<?> cancelEvent(@PathVariable long id) {
         eventService.deleteEvent(id);
@@ -80,7 +78,7 @@ public class EventController {
         if(id.isEmpty()) {
             return new ResponseEntity<>("this route requires an id", HttpStatus.BAD_REQUEST);
         }
-        long daysUntilEvent = eventService.daysUntilEvent(eventService.getEventById(id.get()).getDate());
+        String daysUntilEvent = eventService.daysUntilEvent(eventService.getEventById(id.get()).getDate());
         return new ResponseEntity<>(daysUntilEvent, HttpStatus.OK);
     }
 
