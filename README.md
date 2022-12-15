@@ -14,7 +14,14 @@ Our API was coded in Java. We utilsed Git to commit our changes and contain our 
 <br />
 SpringIntialzr was imperative for us to use as we were able to implement dependencies which allowed us to utilise particular functions and commands. For instance, we utilised SpringBoot to implement the Spring framework, JPA to convert JSON and Java, alongside postman to test our functions. These platforms allowed us to test our code and import a variety of functions whiched allowed us to create our tables and extend our beans.
 
-### ***Project Timeline*** 💡
+## **TABLE OF CONTENTS**
+> 1. Project Timeline
+> 2. The API
+> 3. Dependencies
+> 4. Commands
+> 5. Instructions
+
+### ***1. Project Timeline*** 💡
 
 - Friday 09/12/2022 - Met with team to discuss ideas and started UML and ERD diagrams.
 - Monday 12/12/2022 - Completed our set MVP using IntelliJ and Git.
@@ -26,7 +33,7 @@ SpringIntialzr was imperative for us to use as we were able to implement depende
 
 <img src = ./diagrams1/project_overview.png>
 
-### ***The API*** 💎
+ ### ***2. The API*** 💎
 
 - We have a many-to-many relationship between our Users and Events.
 - We included a DTO class to isolate our userId.
@@ -43,7 +50,7 @@ SpringIntialzr was imperative for us to use as we were able to implement depende
 
 <br />
 
-### ***Dependencies*** ⚓
+3. ### ***Dependencies*** ⚓
 
 - JPA Spring Data JPA
 - Spring Web
@@ -52,7 +59,7 @@ SpringIntialzr was imperative for us to use as we were able to implement depende
 <br />
 
 
-### ***Our Commands*** 🫡
+ ### ***4. Commands*** 🫡
 
 ## ***USERS***
 
@@ -100,7 +107,7 @@ SpringIntialzr was imperative for us to use as we were able to implement depende
 <br />
 
 
-### ***Instructions*** 📝 
+### ***5. Instructions*** 📝 
 
 **1. Create a database in your desired location using terminal: 'createdb *insert desired name*'.**
 <br />
