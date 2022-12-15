@@ -20,7 +20,6 @@ Our API was coded in Java. We utilsed Git to commit our changes and contain our 
 - Wednesday 14/12/2022 - Completed functions for the days until the event and setting a capacity.
 - Thursday 15/12/2022 - Fixing errors and preparing presentation.
 - Friday 16/12/2022 - Presentation.
-<br />
 
 
 <img src = ./diagrams1/project_overview.png>
@@ -60,7 +59,7 @@ Our API was coded in Java. We utilsed Git to commit our changes and contain our 
 | COMMAND | URL    |
 | :---:   | :---: | 
 | GET all users | localhost:8080/users   |
-| GET user by id: | localhost:8080/users/1  |
+| GET user by user id (i.e.: id = 1): | localhost:8080/users/1  |
 
 2. **POST** new user
 
@@ -75,8 +74,8 @@ Our API was coded in Java. We utilsed Git to commit our changes and contain our 
 | COMMAND | URL    |
 | :---:   | :---: | 
 | GET all events : | localhost:8080/events   |
-| GET event by event id: | localhost:8080/events/1   |
-| GET event by date: | localhost:8080/events?date=2023-01-06   |
+| GET event by event id (i.e. id = 1): | localhost:8080/events/1   |
+| GET event by date (example:one of our event dates): | localhost:8080/events?date=2023-01-06   |
 | GET days until event (with event id = 2): | localhost:8080/events/days-until/2   |
 
 2. **POST** EVENTS
@@ -89,7 +88,7 @@ Our API was coded in Java. We utilsed Git to commit our changes and contain our 
 
 | COMMAND | URL    |
 | :---:   | :---: | 
-| PATCH an event: | localhost:8080/events/1  |
+| PATCH an event (i.e.: id = 1): | localhost:8080/events/1  |
 
 4. **DELETE** EVENTS
 
@@ -118,7 +117,7 @@ Our API was coded in Java. We utilsed Git to commit our changes and contain our 
  ### ***USERS***
 
 **5. To use GET USERS functions:**
-- Select **GET** mapping and enter the URL for commands 'GET all users' / 'GET user by id' listed in the users command table above to get all users or individual users via id.
+- Select **GET** mapping and enter the URL for commands 'GET all users' / 'GET user by user id' listed in the users command table above to get all users or individual users via id.
 <br />
 
 **6. To use POST USERS function:**
@@ -150,7 +149,7 @@ Our API was coded in Java. We utilsed Git to commit our changes and contain our 
      - For example: the **PATCH** events table command is showing an update event id 1 (Paint N Sip). However, to update the event with a new user, the new users id must be entered in the body. 
      <br />
 
-    - > body: { “userId”: 7 }
+    - > body: { “userId”: 6 }
     - Once the userID is sent, the user will be added to the event.
     - The user can now be found in the event's list of users, and the event in the user's list of events.
     - However, if the events capacity has been reached, the user will not be added to the event accompained with a response declaring the event is full.
@@ -162,3 +161,9 @@ Our API was coded in Java. We utilsed Git to commit our changes and contain our 
 - Select DELETE mapping and enter the URL for command 'DELETE an event' listed in the events command table above to remove an event from the events list using an events id. 
 
     - The command table example shows event id = 3 (LDN Motor Show) being deleted. Once deleted, a response declaring the event hs been successully deleted will return.
+
+<br />
+<br />
+<br />
+
+# **WE HOPE YOU ENJOY USING OUR API**! 👾 
