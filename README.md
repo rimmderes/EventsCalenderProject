@@ -10,11 +10,7 @@
 
 - Our team had taken interest in apps and websites, such as EventBrite and Fatsoma, which present events for people to attend. We originally wanted to produce an individual calendar for users, however, we recognised that a booking system which can show the array of events one may have was better. We wanted our API to encompass a ranges of events, not limited to work meetings, networking events or personal affairs, but all. Thus, we chose to create an events booking system to include these all.
 
-Our API was coded in Java. We utilsed Git to commit our changes and contain our code in GitHub with our UML and ERD diagrams. The platform is extremely useful to track any changes we have made and roll back on any code. 
-<br />
-SpringIntialzr was imperative for us to use as we were able to implement dependencies which allowed us to utilise particular functions and commands. For instance, we utilised SpringBoot to implement the Spring framework, JPA to convert JSON and Java, alongside postman to test our functions. These platforms allowed us to test our code and import a variety of functions whiched allowed us to create our tables and extend our beans.
-
-## **TABLE OF CONTENTS**
+## **TABLE OF CONTENTS** 📖
 > 1. Project Timeline
 > 2. The API
 > 3. Dependencies
@@ -56,6 +52,11 @@ SpringIntialzr was imperative for us to use as we were able to implement depende
 - Spring Web
 - SpringBoot DevTools
 - PostgresSQL Driver
+<br />
+
+Our API was coded in Java. We utilsed Git to commit our changes and contain our code in GitHub with our UML and ERD diagrams. The platform is extremely useful to track any changes we have made and roll back on any code. 
+<br />
+SpringIntialzr was imperative for us to use as we were able to implement dependencies which allowed us to utilise particular functions and commands. For instance, we utilised SpringBoot to implement the Spring framework, JPA to convert JSON and Java, and SQL to manage our relational databases and perform various operations on the data in them. Finally, we used postman to test our functions. These platforms allowed us to test our code and import a variety of functions which allowed us to create our tables and extend our beans (Examples: @JPARepositories, @Component etc).
 <br />
 
 
@@ -109,7 +110,7 @@ SpringIntialzr was imperative for us to use as we were able to implement depende
 
 ### ***5. Instructions*** 📝 
 
-**1. Create a database in your desired location using terminal: 'createdb *insert desired name*'.**
+**1. Create a database in your desired location using terminal: 'createdb * *insert desired name* * '.**
 <br />
 
 **2. Run the API in the EventCalenderApplication class.** 
