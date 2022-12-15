@@ -48,8 +48,8 @@ Our API was coded in Java. We utilsed Git to commit our changes and contain our 
 1. GET (SHOW) USERS
 
 | COMMAND | URL link
-| :---:
-| GET all users | localhost:8080/users
+| :---: |
+| GET all users | localhost:8080/users|
 | GET user by id: | localhost:8080/users/1 |  
 
 2. POST new user
