@@ -80,7 +80,6 @@ public class EventController {
 
 
 
-
     // adding user to event whilst limited to capacity
     @PatchMapping(value = "/{id}")
     public ResponseEntity<?> updateEvent(@RequestBody BookingDTO bookingDTO, @PathVariable Long id) {
@@ -92,7 +91,6 @@ public class EventController {
         }
 
     }
-
 
 
     // remove event

@@ -72,7 +72,9 @@ public class EventService {
 
     // delete an event from the repository using its id
     public String deleteEvent(long id) {
+        // delete event from repository via id
         eventRepository.deleteById(id);
+        // confirm event has cancelled
         return "Event successfully cancelled.";
     }
 
