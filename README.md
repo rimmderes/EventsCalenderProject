@@ -52,12 +52,28 @@ Our API was coded in Java. We utilsed Git to commit our changes and contain our 
 | http://localhost:8080/users
 http://localhost:8080/user |     |     |
 
-1. GET (SHOW)
+1. GET (SHOW) EVENTS
 
-| EVENTS |      |      |
-| :---:   |  :---: |  :---: |
-| http://localhost:8080/users
-http://localhost:8080/user |     |     |
+| EVENTS |
+| :---:   
+| GET all events: |
+| http://localhost:8080/events |
+|  :---: 
+| GET event by event id: |
+| http://localhost:8080/events/1 |
+|  :---: 
+| GET event by date: |
+| http://localhost:8080/events?date=2023-01-06 |
+|  :---: 
+| GET days until event with id = 2|
+| http://localhost:8080/events/days-until/2 |
+
+2. POST EVENTS
+
+| EVENTS |
+|  :---: 
+| Post a new event: |
+| http://localhost:8080/events |
 
 
 
