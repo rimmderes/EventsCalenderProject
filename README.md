@@ -105,9 +105,11 @@ Our API was coded in Java. We utilsed Git to commit our changes and contain our 
 4. Open [Postman](https://www.postman.com/) to use GET, POST, PATCH and DELETE commands.
 <br />
 <br />
+
 5. To use GET USERS functions:
 - Select GET mapping and enter the URL for commands 'GET all users' / 'GET user by id' listed in the users command table above to get all users or individual users via id.
 <br />
+
 6. To use POST USERS function:
 - Select POST mapping and enter the URL for command 'POST new user' listed in the users command table above to add a user to the user list. An id to the user will be provided and the user will now appear on the GET all users mapping when 'sending' the function again.
 
@@ -115,21 +117,28 @@ Our API was coded in Java. We utilsed Git to commit our changes and contain our 
 
 <br />
 <br />
+
 7. To use GET EVENTS function:
 - Select GET mapping and enter the URL for commands 'GET all events'/'GET event by id' listed in the events command table above to get all events or individual events via id.
 <br />
+
 - Select GET mapping and enter the URL for command 'GET event by date' listed in the events command table above to get an to find events on a particular date. The example date in the command table refers to the 'Paint N Sip' event, which appears upon sending the request.
 <br />
+
 - Select GET mapping and enter the URL for command 'GET days until event' listed in the events command table above to get the years/months/days until the event begins. Enter the id of the desired event to recieve the response. The example above refers to event 'Pizza Making' (id = 2).
 <br />
+
 8. To use POST EVENTS function:
 - Select POST mapping and enter the URL for command 'POST a new event' listed in the events command table above to add an event to the events list. An id to the event will be provided and the event will now appear on the GET all events mapping when 'sending' the function again.
 <br />
+
 9. To use PATCH EVENTS function:
 
 - Select PATCH mapping and enter the URL for command 'PATCH an event' listed in the events command table above to update an event with a new user.
 
-     - For example: the PATCH events table command is showing an update event id 1 (Paint N Sip). However, to update the event with a new user, the new users id must be entered in the body.  
+     - For example: the PATCH events table command is showing an update event id 1 (Paint N Sip). However, to update the event with a new user, the new users id must be entered in the body. 
+     <br />
+
     - > body:
 <br /> 
 { <br />
@@ -140,6 +149,7 @@ Our API was coded in Java. We utilsed Git to commit our changes and contain our 
 
 
 <br />
+
 10. To use DELETE EVENTS function:
 
 - Select DELETE mapping and enter the URL for command 'DELETE an event' listed in the events command table above to remove an event from the events list using an events id. 
