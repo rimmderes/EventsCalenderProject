@@ -29,12 +29,12 @@ INSERT TIMELINE IMAGE HERE REBECCA
 - We included a DTO class to isolate our userId.
 
 #### ***Class Diagram (UML)***
-<img src= /Users/rimmderes/Documents/coursework/Week_06/calender_project/EventsCalenderProject/Event_Calender/diagrams/UML.png>
+<img src= "https://github.com/rimmderes/EventsCalenderProject/blob/main/diagrams1/UML.png?raw=true">
 
 
 #### ***Entity Relationship Diagram (ERD)***
 
-<img src= /Users/rimmderes/Documents/coursework/Week_06/calender_project/EventsCalenderProject/Event_Calender/diagrams/ERD.png>
+<img src= ./diagrams1/ERD.png>
 
 ### ***Dependencies*** 🫡
 
