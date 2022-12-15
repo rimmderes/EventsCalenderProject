@@ -83,5 +83,4 @@ public class EventService {
         return eventRepository.findByDateEquals(date);
     }
 
-
 }

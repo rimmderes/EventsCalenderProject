@@ -4,12 +4,12 @@ import com.example.Event_Calender.models.User;
 import com.example.Event_Calender.repositories.UserRepository;
 import com.example.Event_Calender.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.AutoConfiguration;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.persistence.Access;
+
 import java.util.List;
 
 @RestController

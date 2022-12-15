@@ -9,11 +9,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.persistence.GeneratedValue;
+
 import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
-import java.time.Period;
+
 import java.util.List;
 import java.util.Optional;
 
@@ -49,7 +47,7 @@ public class EventController {
         return new ResponseEntity<>(eventService.findAllEventsByDate(date), HttpStatus.OK);
     }
         // get all events request response
-        return new ResponseEntity<>(eventService.getAllEvents(), HttpStatus.OK);
+    return new ResponseEntity<>(eventService.getAllEvents(), HttpStatus.OK);
 
     }
 
