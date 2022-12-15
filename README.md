@@ -8,9 +8,11 @@
 
 ### ***Project Overview*** 🚀
 
-- Our team had taken interest in apps and websites, such as EventBrite and Fatsoma, which present events for people to attend. This led to a demonstration of a many-to-many relationship between users and event, allowing us to utilise the two entities together.
+- Our team had taken interest in apps and websites, such as EventBrite and Fatsoma, which present events for people to attend. We originally wanted to produce an individual calendar for users, however, we recognised that a booking system which can show the array of events one may have was better. We wanted our API to encompass a ranges of events, not limited to work meetings, networking events or personal affairs, but all. Thus, we chose to create an events booking system to include these all.
 
-Our API was coded in Java. We utilsed Git to commit our changes and contain our code in GitHub with our UML and ERD diagrams. We also used SpringBoot to implement the Spring framework, JPA to convert JSON and Java, alongside postman to test our functions.
+Our API was coded in Java. We utilsed Git to commit our changes and contain our code in GitHub with our UML and ERD diagrams. The platform is extremely useful to track any changes we have made and roll back on any code. 
+<br />
+SpringIntialzr was imperative for us to use as we were able to implement dependencies which allowed us to utilise particular functions and commands. For instance, we utilised SpringBoot to implement the Spring framework, JPA to convert JSON and Java, alongside postman to test our functions. These platforms allowed us to test our code and import a variety of functions whiched allowed us to create our tables and extend our beans.
 
 ### ***Project Timeline*** 💡
 
