@@ -114,7 +114,7 @@ Our API was coded in Java. We utilsed Git to commit our changes and contain our 
 <br />
 <br />
 
- ### ***USERS***
+ ### ***USERS*** 💃
 
 **5. To use GET USERS functions:**
 - Select **GET** mapping and enter the URL for commands 'GET all users' / 'GET user by user id' listed in the users command table above to get all users or individual users via id.
@@ -126,7 +126,7 @@ Our API was coded in Java. We utilsed Git to commit our changes and contain our 
 <br />
 <br />
 
-### ***EVENTS***
+### ***EVENTS*** 🎉
 
 **7. To use GET EVENTS function:**
 - Select **GET** mapping and enter the URL for commands 'GET all events'/'GET event by id' listed in the events command table above to get all events or individual events via id.
