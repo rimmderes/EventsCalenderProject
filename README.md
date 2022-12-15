@@ -54,30 +54,35 @@ Our API was coded in Java. We utilsed Git to commit our changes and contain our 
 
 2. POST new user
 
-| USERS |
-| :---:
-| POST new user: |
-| localhost:8080/users |  
+| COMMAND | URL    |
+| :---:   | :---: | 
+| POST new user | localhost:8080/users   |
+
 
 1. GET (SHOW) EVENTS
 
-| EVENTS |
-| :---:   
-| GET all events: |
-| localhost:8080/events |
-| GET event by event id: |
-| localhost:8080/events/1 |
-| GET event by date: |
-| localhost:8080/events?date=2023-01-06 |
-| GET days until event with id = 2|
-| localhost:8080/events/days-until/2 |
+| COMMAND | URL    |
+| :---:   | :---: | 
+| GET event by event id: | localhost:8080/events/1   |
+| GET event by date: | localhost:8080/events?date=2023-01-06   |
+| GET days until event with id = 2: | localhost:8080/events/days-until/2   |
 
 2. POST EVENTS
 
-| EVENTS |
-|  :---: 
-| Post a new event: |
-| localhost:8080/events |
+| COMMAND | URL    |
+| :---:   | :---: | 
+| POST a new event: | localhost:8080/events  |
+
+3. PATCH Event
+| COMMAND | URL    |
+| :---:   | :---: | 
+| PATCH user 9 into event 1: | localhost:8080/events/1  |
+
+4. DELETE EVENTS
+| COMMAND | URL    |
+| :---:   | :---: | 
+| DELETE a new event (i.e. id = 5): | localhost:8080/events/5  |
+
 
 
 
