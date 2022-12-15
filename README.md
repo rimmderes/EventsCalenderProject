@@ -89,9 +89,15 @@ Our API was coded in Java. We utilsed Git to commit our changes and contain our 
 | DELETE a new event (i.e. id = 5): | localhost:8080/events/5  |
 
 
+### ***Instructions*** 📝 
 
-
-
-
-
-### ***Instructions*** 
+1. Create a database in your desired location using terminal: 'createdb *insert desired name*'.
+2. Run the API in the EventCalenderApplication class.
+3. Open Postico to view Users and Events table with inputted information from the DataLoader
+4. Open [Postman](https://www.postman.com/) to use GET, POST, PATCH and DELETE commands.
+5. To use GET USERS functions:
+- Select GET mapping and enter the commands listed in the table above to get all users or individual users via id.
+6. To use POST USERS function:
+- Select POST mapping and enter the command listed in the table above to add a user to the user list. An id to the user will be provided and the user will now appear on the get mapping when 'sending' the function again.
+7. To use GET EVENTS function:
+- 
