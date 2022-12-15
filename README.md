@@ -159,6 +159,7 @@ SpringIntialzr was imperative for us to use as we were able to implement depende
     - Once the userID is sent, the user will be added to the event.
     - The user can now be found in the event's list of users, and the event in the user's list of events.
     - However, if the events capacity has been reached, the user will not be added to the event accompained with a response declaring the event is full.
+<img src= ./example_code/capacity_reached.png>
 <br />
 
 
