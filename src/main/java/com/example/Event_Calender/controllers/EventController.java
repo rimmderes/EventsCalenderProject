@@ -54,17 +54,19 @@ public class EventController {
     }
 
 
-
     // Finding out how many days to an event
     @GetMapping(value = "/days-until/{id}")
     public ResponseEntity<?> getDaysUntilEventById(@PathVariable Optional<Long> id) {    // use of optional as null is not appropriate to use in if statement
-        if (id.isEmpty()) {
-            // NEED TO COME BACK TO ----> THROW EXCEPTION HERE
-            return new ResponseEntity<>("this route requires an id", HttpStatus.BAD_REQUEST);
-        }
         // get days until event using event id
         String daysUntilEvent = eventService.daysUntilEvent(eventService.getEventById(id.get()).getDate());
         return new ResponseEntity<>(daysUntilEvent, HttpStatus.OK);
+    }
+
+
+    // produce an error message if daysUntil root is used without id
+    @GetMapping (value = "/days-until")
+    public ResponseEntity<?> getDaysUntilEvent () {
+        return new ResponseEntity<>("This route doesn't exist. This requires an id", HttpStatus.BAD_REQUEST);
     }
 
 
