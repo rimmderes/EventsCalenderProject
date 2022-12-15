@@ -47,14 +47,14 @@ Our API was coded in Java. We utilsed Git to commit our changes and contain our 
 
 #### USERS
 
-1. GET (SHOW) USERS
+1. **GET** (SHOW) USERS
 
 | COMMAND | URL    |
 | :---:   | :---: | 
 | GET all users | localhost:8080/users   |
 | GET user by id: | localhost:8080/users/1  |
 
-2. POST new user
+2. **POST** new user
 
 | COMMAND | URL    |
 | :---:   | :---: | 
@@ -62,7 +62,7 @@ Our API was coded in Java. We utilsed Git to commit our changes and contain our 
 
 #### EVENTS
 
-1. GET (SHOW) EVENTS
+1. **GET** (SHOW) EVENTS
 
 | COMMAND | URL    |
 | :---:   | :---: | 
@@ -71,19 +71,19 @@ Our API was coded in Java. We utilsed Git to commit our changes and contain our 
 | GET event by date: | localhost:8080/events?date=2023-01-06   |
 | GET days until event (with event id = 2): | localhost:8080/events/days-until/2   |
 
-2. POST EVENTS
+2. **POST** EVENTS
 
 | COMMAND | URL    |
 | :---:   | :---: | 
 | POST a new event: | localhost:8080/events  |
 
-3. PATCH Event
+3. **PATCH** Event
 
 | COMMAND | URL    |
 | :---:   | :---: | 
 | PATCH an event: | localhost:8080/events/1  |
 
-4. DELETE EVENTS
+4. **DELETE** EVENTS
 
 | COMMAND | URL    |
 | :---:   | :---: | 
@@ -92,51 +92,53 @@ Our API was coded in Java. We utilsed Git to commit our changes and contain our 
 
 ### ***Instructions*** 📝 
 
-1. Create a database in your desired location using terminal: 'createdb *insert desired name*'.
+**1. Create a database in your desired location using terminal: 'createdb *insert desired name*'.**
 <br />
 
-2. Run the API in the EventCalenderApplication class. 
+**2. Run the API in the EventCalenderApplication class.** 
 <br />
 
-3. Open Postico to view Users and Events table with inputted information from the DataLoader
-<br />
-<br />
-
-4. Open [Postman](https://www.postman.com/) to use GET, POST, PATCH and DELETE commands.
+**3. Open Postico to view Users and Events table with inputted information from the DataLoader.**
 <br />
 <br />
 
-5. To use GET USERS functions:
-- Select GET mapping and enter the URL for commands 'GET all users' / 'GET user by id' listed in the users command table above to get all users or individual users via id.
-<br />
-
-6. To use POST USERS function:
-- Select POST mapping and enter the URL for command 'POST new user' listed in the users command table above to add a user to the user list. An id to the user will be provided and the user will now appear on the GET all users mapping when 'sending' the function again.
-
-    -   However, if the events capacity has been reached, the user will not be added to the event accompained with a response declaring the event is full.
-
+**4. Open [Postman](https://www.postman.com/) to use GET, POST, PATCH and DELETE commands.**
 <br />
 <br />
 
-7. To use GET EVENTS function:
-- Select GET mapping and enter the URL for commands 'GET all events'/'GET event by id' listed in the events command table above to get all events or individual events via id.
+ ## ***USERS***
+
+**5. To use GET USERS functions:**
+- Select **GET** mapping and enter the URL for commands 'GET all users' / 'GET user by id' listed in the users command table above to get all users or individual users via id.
 <br />
 
-- Select GET mapping and enter the URL for command 'GET event by date' listed in the events command table above to get an to find events on a particular date. The example date in the command table refers to the 'Paint N Sip' event, which appears upon sending the request.
+**6. To use POST USERS function:**
+- Select **POST** mapping and enter the URL for command 'POST new user' listed in the users command table above to add a user to the user list. An id to the user will be provided and the user will now appear on the GET all users mapping when 'sending' the function again.
+
+<br />
 <br />
 
-- Select GET mapping and enter the URL for command 'GET days until event' listed in the events command table above to get the years/months/days until the event begins. Enter the id of the desired event to recieve the response. The example above refers to event 'Pizza Making' (id = 2).
+# ***EVENTS***
+
+**7. To use GET EVENTS function:**
+- Select **GET** mapping and enter the URL for commands 'GET all events'/'GET event by id' listed in the events command table above to get all events or individual events via id.
 <br />
 
-8. To use POST EVENTS function:
-- Select POST mapping and enter the URL for command 'POST a new event' listed in the events command table above to add an event to the events list. An id to the event will be provided and the event will now appear on the GET all events mapping when 'sending' the function again.
+- Select **GET** mapping and enter the URL for command 'GET event by date' listed in the events command table above to get an to find events on a particular date. The example date in the command table refers to the 'Paint N Sip' event, which appears upon sending the request.
 <br />
 
-9. To use PATCH EVENTS function:
+- Select **GET** mapping and enter the URL for command 'GET days until event' listed in the events command table above to get the years/months/days until the event begins. Enter the id of the desired event to recieve the response. The example above refers to event 'Pizza Making' (id = 2).
+<br />
 
-- Select PATCH mapping and enter the URL for command 'PATCH an event' listed in the events command table above to update an event with a new user.
+**8. To use POST EVENTS function:**
+- Select **POST** mapping and enter the URL for command 'POST a new event' listed in the events command table above to add an event to the events list. An id to the event will be provided and the event will now appear on the GET all events mapping when 'sending' the function again.
+<br />
 
-     - For example: the PATCH events table command is showing an update event id 1 (Paint N Sip). However, to update the event with a new user, the new users id must be entered in the body. 
+**9. To use PATCH EVENTS function:**
+
+- Select **PATCH** mapping and enter the URL for command 'PATCH an event' listed in the events command table above to update an event with a new user.
+
+     - For example: the **PATCH** events table command is showing an update event id 1 (Paint N Sip). However, to update the event with a new user, the new users id must be entered in the body. 
      <br />
 
     - > body:
@@ -144,13 +146,14 @@ Our API was coded in Java. We utilsed Git to commit our changes and contain our 
 { <br />
         “userId”: 7         
 }
-    - Once the userID is sent, the user will be added to the event if the event has not reached its capacity.
+    - Once the userID is sent, the user will be added to the event.
     - The user can now be found in the event's list of users, and the event in the user's list of events.
+    - However, if the events capacity has been reached, the user will not be added to the event accompained with a response declaring the event is full.
 
 
 <br />
 
-10. To use DELETE EVENTS function:
+**10. To use DELETE EVENTS function:**
 
 - Select DELETE mapping and enter the URL for command 'DELETE an event' listed in the events command table above to remove an event from the events list using an events id. 
 
