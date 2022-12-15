@@ -20,6 +20,8 @@ Our API was coded in Java. We utilsed Git to commit our changes and contain our 
 - Wednesday 14/12/2022 - Completed functions for the days until the event and setting a capacity.
 - Thursday 15/12/2022 - Fixing errors and preparing presentation.
 - Friday 16/12/2022 - Presentation.
+<br />
+
 
 <img src = ./diagrams1/project_overview.png>
 
@@ -27,14 +29,18 @@ Our API was coded in Java. We utilsed Git to commit our changes and contain our 
 
 - We have a many-to-many relationship between our Users and Events.
 - We included a DTO class to isolate our userId.
+<br />
 
 #### ***Class Diagram (UML)***
 <img src= ./diagrams1/UML.png>
+<br />
 
 
 #### ***Entity Relationship Diagram (ERD)***
 
 <img src= ./diagrams1/ERD.png>
+
+<br />
 
 ### ***Dependencies*** ⚓
 
@@ -42,10 +48,12 @@ Our API was coded in Java. We utilsed Git to commit our changes and contain our 
 - Spring Web
 - SpringBoot DevTools
 - PostgresSQL Driver
+<br />
+
 
 ### ***Our Commands*** 🫡
 
-#### USERS
+## ***USERS***
 
 1. **GET** (SHOW) USERS
 
@@ -60,7 +68,7 @@ Our API was coded in Java. We utilsed Git to commit our changes and contain our 
 | :---:   | :---: | 
 | POST new user | localhost:8080/users   |
 
-#### EVENTS
+## ***EVENTS***
 
 1. **GET** (SHOW) EVENTS
 
@@ -88,6 +96,7 @@ Our API was coded in Java. We utilsed Git to commit our changes and contain our 
 | COMMAND | URL    |
 | :---:   | :---: | 
 | DELETE an event (i.e. id = 3): | localhost:8080/events/3  |
+<br />
 
 
 ### ***Instructions*** 📝 
@@ -106,7 +115,7 @@ Our API was coded in Java. We utilsed Git to commit our changes and contain our 
 <br />
 <br />
 
- ## ***USERS***
+ ### ***USERS***
 
 **5. To use GET USERS functions:**
 - Select **GET** mapping and enter the URL for commands 'GET all users' / 'GET user by id' listed in the users command table above to get all users or individual users via id.
@@ -118,7 +127,7 @@ Our API was coded in Java. We utilsed Git to commit our changes and contain our 
 <br />
 <br />
 
-# ***EVENTS***
+### ***EVENTS***
 
 **7. To use GET EVENTS function:**
 - Select **GET** mapping and enter the URL for commands 'GET all events'/'GET event by id' listed in the events command table above to get all events or individual events via id.
@@ -141,17 +150,12 @@ Our API was coded in Java. We utilsed Git to commit our changes and contain our 
      - For example: the **PATCH** events table command is showing an update event id 1 (Paint N Sip). However, to update the event with a new user, the new users id must be entered in the body. 
      <br />
 
-    - > body:
-<br /> 
-{ <br />
-        “userId”: 7         
-}
+    - > body: { “userId”: 7 }
     - Once the userID is sent, the user will be added to the event.
     - The user can now be found in the event's list of users, and the event in the user's list of events.
     - However, if the events capacity has been reached, the user will not be added to the event accompained with a response declaring the event is full.
-
-
 <br />
+
 
 **10. To use DELETE EVENTS function:**
 
