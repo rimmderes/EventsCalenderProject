@@ -45,12 +45,20 @@ Our API was coded in Java. We utilsed Git to commit our changes and contain our 
 
 ### ***Our Commands***
 
-1. GET (SHOW)
+1. GET (SHOW) USERS
 
-| USERS |      |      |
-| :---:   |  :---: |  :---: |
+| USERS |
+| :---:
+| GET all users :
 | http://localhost:8080/users
-http://localhost:8080/user |     |     |
+| GET user by id: 
+| http://localhost:8080/users/1 |  
+
+2. POST new user
+
+| POST new user: |
+| :---: |
+| http://localhost:8080/users |  
 
 1. GET (SHOW) EVENTS
 
@@ -58,13 +66,10 @@ http://localhost:8080/user |     |     |
 | :---:   
 | GET all events: |
 | http://localhost:8080/events |
-|  :---: 
 | GET event by event id: |
 | http://localhost:8080/events/1 |
-|  :---: 
 | GET event by date: |
 | http://localhost:8080/events?date=2023-01-06 |
-|  :---: 
 | GET days until event with id = 2|
 | http://localhost:8080/events/days-until/2 |
 
