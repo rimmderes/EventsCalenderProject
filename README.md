@@ -134,9 +134,11 @@ SpringIntialzr was imperative for us to use as we were able to implement depende
 
 **7. To use GET EVENTS function:**
 - Select **GET** mapping and enter the URL for commands 'GET all events'/'GET event by id' listed in the events command table above to get all events or individual events via id.
+<img src= ./example_code/eventbyid.png>
 <br />
 
 - Select **GET** mapping and enter the URL for command 'GET event by date' listed in the events command table above to get an to find events on a particular date. The example date in the command table refers to the 'Paint N Sip' event, which appears upon sending the request.
+<img src= ./example_code/eventbydate.png>
 <br />
 
 - Select **GET** mapping and enter the URL for command 'GET days until event' listed in the events command table above to get the years/months/days until the event begins. Enter the id of the desired event to recieve the response. The example above refers to event 'Pizza Making' (id = 2).
