@@ -70,10 +70,10 @@ public class EventService {
 
     }
 
-
     // delete an event from the repository using its id
-    public void deleteEvent(long id) {
+    public String deleteEvent(long id) {
         eventRepository.deleteById(id);
+        return "Event successfully cancelled.";
     }
 
     // find an event by date

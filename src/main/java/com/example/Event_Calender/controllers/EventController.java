@@ -34,6 +34,41 @@ public class EventController {
         return new ResponseEntity<>(event, HttpStatus.OK);
     }
 
+
+
+    /// Finding all events by Date, if not, find all
+    @GetMapping
+    public ResponseEntity<List<Event>> getFilteredEventByDate(
+            // create a parameter for method
+            @RequestParam(required = false, name = "date")
+            // express calendar date in standard format in URL
+            @DateTimeFormat(iso=DateTimeFormat.ISO.DATE)
+            LocalDate date
+    ) { if(date != null) {        // != "not equal to"
+        // get event by date request response
+        return new ResponseEntity<>(eventService.findAllEventsByDate(date), HttpStatus.OK);
+    }
+        // get all events request response
+        return new ResponseEntity<>(eventService.getAllEvents(), HttpStatus.OK);
+
+    }
+
+
+
+    // Finding out how many days to an event
+    @GetMapping(value = "/days-until/{id}")
+    public ResponseEntity<?> getDaysUntilEventById(@PathVariable Optional<Long> id) {    // use of optional as null is not appropriate to use in if statement
+        if (id.isEmpty()) {
+            // NEED TO COME BACK TO ----> THROW EXCEPTION HERE
+            return new ResponseEntity<>("this route requires an id", HttpStatus.BAD_REQUEST);
+        }
+        // get days until event using event id
+        String daysUntilEvent = eventService.daysUntilEvent(eventService.getEventById(id.get()).getDate());
+        return new ResponseEntity<>(daysUntilEvent, HttpStatus.OK);
+    }
+
+
+
     // adding a new event using body in postman
     @PostMapping
     public ResponseEntity<Event> addNewEvent(@RequestBody Event event) {
@@ -41,8 +76,10 @@ public class EventController {
         return new ResponseEntity<>(newEvent, HttpStatus.CREATED);
     }
 
-    // adding user to event whilst limited to capacity
 
+
+
+    // adding user to event whilst limited to capacity
     @PatchMapping(value = "/{id}")
     public ResponseEntity<?> updateEvent(@RequestBody BookingDTO bookingDTO, @PathVariable Long id) {
         try {
@@ -54,46 +91,12 @@ public class EventController {
 
     }
 
+
+
     // remove event
     @DeleteMapping(value = "/{id}")
     public ResponseEntity<?> cancelEvent(@PathVariable long id) {
-        eventService.deleteEvent(id);
-        return new ResponseEntity<>(null, HttpStatus.NO_CONTENT);
+        return new ResponseEntity<>(eventService.deleteEvent(id), HttpStatus.OK);
     }
-
-    // Extension
-
-    /// Finding all events by Date, if not, find all
-    @GetMapping
-    public ResponseEntity<List<Event>> getFilteredEventByDate(
-            // create a parameter for method
-            @RequestParam(required = false, name = "date")
-            // express calendar date in standard format in URL
-            @DateTimeFormat(iso=DateTimeFormat.ISO.DATE)
-            LocalDate date
-            ) { if(date != null) {        // != "not equal to"
-                // get event by date request response
-                return new ResponseEntity<>(eventService.findAllEventsByDate(date), HttpStatus.OK);
-    }
-        // get all events request response
-        return new ResponseEntity<>(eventService.getAllEvents(), HttpStatus.OK);
-
-    }
-
-
-    // Finding out how many days to an event
-    @GetMapping(value = "/days-until/{id}")
-    public ResponseEntity<?> getDaysUntilEventById(@PathVariable Optional<Long> id) {    // use of optional as null is not appropriate to use in if statement
-        if (id.isEmpty()) {
-            // NEED TO COME BACK TO ----> THROW EXCEPTION HERE
-            return new ResponseEntity<>("this route requires an id", HttpStatus.BAD_REQUEST);
-        }
-            // get days until event using event id
-            String daysUntilEvent = eventService.daysUntilEvent(eventService.getEventById(id.get()).getDate());
-            return new ResponseEntity<>(daysUntilEvent, HttpStatus.OK);
-        }
-
-
-
 
 }
