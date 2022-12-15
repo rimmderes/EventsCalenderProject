@@ -120,10 +120,12 @@ SpringIntialzr was imperative for us to use as we were able to implement depende
 
 **5. To use GET USERS functions:**
 - Select **GET** mapping and enter the URL for commands 'GET all users' / 'GET user by user id' listed in the users command table above to get all users or individual users via id.
+<img src= ./example_code/getallusers.png>
 <br />
 
 **6. To use POST USERS function:**
 - Select **POST** mapping and enter the URL for command 'POST new user' listed in the users command table above to add a user to the user list. An id to the user will be provided and the user will now appear on the GET all users mapping when 'sending' the function again.
+<img src= ./example_code/adduser.png>
 
 <br />
 <br />
@@ -138,10 +140,12 @@ SpringIntialzr was imperative for us to use as we were able to implement depende
 <br />
 
 - Select **GET** mapping and enter the URL for command 'GET days until event' listed in the events command table above to get the years/months/days until the event begins. Enter the id of the desired event to recieve the response. The example above refers to event 'Pizza Making' (id = 2).
+<img src= ./example_code/daysuntil.png>
 <br />
 
 **8. To use POST EVENTS function:**
 - Select **POST** mapping and enter the URL for command 'POST a new event' listed in the events command table above to add an event to the events list. An id to the event will be provided and the event will now appear on the GET all events mapping when 'sending' the function again.
+<img src= ./example_code/postevent.png>
 <br />
 
 **9. To use PATCH EVENTS function:**
@@ -163,6 +167,7 @@ SpringIntialzr was imperative for us to use as we were able to implement depende
 - Select DELETE mapping and enter the URL for command 'DELETE an event' listed in the events command table above to remove an event from the events list using an events id. 
 
     - The command table example shows event id = 3 (LDN Motor Show) being deleted. Once deleted, a response declaring the event hs been successully deleted will return.
+<img src= ./example_code/deleteevent.png>
 
 <br />
 <br />
