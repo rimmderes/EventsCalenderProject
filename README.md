@@ -36,14 +36,16 @@ Our API was coded in Java. We utilsed Git to commit our changes and contain our 
 
 <img src= ./diagrams1/ERD.png>
 
-### ***Dependencies*** 🫡
+### ***Dependencies*** ⚓
 
 - JPA Spring Data JPA
 - Spring Web
 - SpringBoot DevTools
 - PostgresSQL Driver
 
-### ***Our Commands***
+### ***Our Commands*** 🫡
+
+#### USERS
 
 1. GET (SHOW) USERS
 
@@ -58,6 +60,7 @@ Our API was coded in Java. We utilsed Git to commit our changes and contain our 
 | :---:   | :---: | 
 | POST new user | localhost:8080/users   |
 
+#### EVENTS
 
 1. GET (SHOW) EVENTS
 
