@@ -56,8 +56,9 @@ Our API was coded in Java. We utilsed Git to commit our changes and contain our 
 
 2. POST new user
 
+| USERS |
+| :---:
 | POST new user: |
-| :---: |
 | localhost:8080/users |  
 
 1. GET (SHOW) EVENTS
