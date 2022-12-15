@@ -21,15 +21,15 @@ Our API was coded in Java. We utilsed Git to commit our changes and contain our 
 - Thursday 15/12/2022 - Fixing errors and preparing presentation.
 - Friday 16/12/2022 - Presentation.
 
-INSERT TIMELINE IMAGE HERE REBECCA
+<img src = ./diagrams1/project_overview.png>
 
-### ***The API*** 
+### ***The API*** 💎
 
 - We have a many-to-many relationship between our Users and Events.
 - We included a DTO class to isolate our userId.
 
 #### ***Class Diagram (UML)***
-<img src= "https://github.com/rimmderes/EventsCalenderProject/blob/main/diagrams1/UML.png?raw=true">
+<img src= ./diagrams1/UML.png>
 
 
 #### ***Entity Relationship Diagram (ERD)***
@@ -45,12 +45,23 @@ INSERT TIMELINE IMAGE HERE REBECCA
 
 ### ***Our Commands***
 
+1. GET (SHOW)
+
+| USERS |      |      |
+| :---:   |  :---: |  :---: |
+| http://localhost:8080/users
+http://localhost:8080/user |     |     |
+
+1. GET (SHOW)
+
+| EVENTS |      |      |
+| :---:   |  :---: |  :---: |
+| http://localhost:8080/users
+http://localhost:8080/user |     |     |
 
 
 
 
 
 
-
-
-
+### ***Instructions*** 
