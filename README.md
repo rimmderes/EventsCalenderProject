@@ -1,4 +1,4 @@
-# **Event Management System Project (BNTA COHORT 7)**
+# **Event Booking System Project (BNTA COHORT 7)**
 
 ## **SAWS Code Team**
 
