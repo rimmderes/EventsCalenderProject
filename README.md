@@ -12,19 +12,20 @@
 
  Our team had taken interest in apps and websites, such as EventBrite and Fatsoma, which present events for people to attend. We originally wanted to produce an individual calendar for users, however, we recognised that a booking system which can show the array of events one may have was better. We wanted our API to encompass a ranges of events, not limited to work meetings, networking events or personal affairs, but all. Thus, we chose to create an events booking system to include all of these.
 
-#### ***Drawbacks***
-Whilst completing the project, we faced a number of difficulties. 
-- One of our major issues was our git branch and merge errors as they were time consuming and deleted some code. We researched how to resolve the issue and soon completely understood and were able to effectively execute branch merges and commits.
-- Additionally, creating multiple route endpoints became an issue. We were unsure how to create the method and execute the function. Although we done research and were provided help which allowed us to create two different endpoints, 
- we were unsure how to continue adding more.
--  
 
 #### ***Technologies***
 
  - Our API was coded in Java. We utilsed Git to commit our changes and contain our code in GitHub with our UML and ERD diagrams. The platform is extremely useful to track any changes we have made and roll back on any code. 
 <br />
-- SpringIntializr was imperative for us to use as we were able to implement dependencies which allowed us to utilise particular functions and commands. For instance, we utilised SpringBoot to implement the Spring framework, JPA to convert JSON and Java, and SQL to manage our relational databases and perform various operations on the data in them. Finally, we used postman to test our functions. These platforms allowed us to test our code and import a variety of functions which allowed us to create our tables and extend our beans (Examples: @JPARepositories, @Component etc).
-- Some of the challenges you faced and features you hope to implement in the future.
+
+-  SpringIntializr was imperative for us to use as we were able to implement dependencies which allowed us to utilise particular functions and commands. For instance, we utilised SpringBoot to implement the Spring framework, JPA to convert JSON and Java, and SQL to manage our relational databases and perform various operations on the data in them. Finally, we used postman to test our functions. These platforms allowed us to test our code and import a variety of functions which allowed us to create our tables and extend our beans (Examples: @JPARepositories, @Component etc).
+
+
+#### ***Drawbacks***
+Whilst completing the project, we faced a number of difficulties. 
+- One of our major issues was our git branch and merge errors as they were time consuming and deleted some code. We researched how to resolve the issue and soon completely understood and were able to effectively execute branch merges and commits.
+- Additionally, creating multiple route endpoints became an issue. We were unsure how to create the method and execute the function. Although we done research and were provided help which allowed us to create two different endpoints, 
+ we were unsure how to continue adding more.
 
 #### ***Future***
 If granted more time, we would like to develop more functions to create a more realistic working app which is complemented by the front-end. These include:
