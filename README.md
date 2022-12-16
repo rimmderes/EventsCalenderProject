@@ -135,27 +135,29 @@ If granted more time, we would like to develop more functions to create a more r
 
 ### ***5. Instructions*** 📝 
 
-**1. Create a database in your desired location using terminal: 'createdb * *insert desired name* * '.**
+**1. Install postgres via the [postgres website](https://www.postgresql.org/download/) or via [home brew](https://brew.sh/).**
+
+**2. Create a database in your desired location using terminal: 'createdb * *insert desired name* * '.**
 <br />
 
-**2. Run the API in the EventCalenderApplication class.** 
+**3. Run the API in the EventCalenderApplication class.** 
 <br />
 
-**3. Open Postico to view Users and Events table with inputted information from the DataLoader.**
+**4. Open Postico to view Users and Events table with inputted information from the DataLoader.**
 <br />
 
-**4. Open [Postman](https://www.postman.com/) to use GET, POST, PATCH and DELETE commands.**
+**5. Open [Postman](https://www.postman.com/) to use GET, POST, PATCH and DELETE commands.**
 <br />
 <br />
 
  ### ***USERS*** 💃
 
-**5. To use `GET` USERS functions:**
+**6. To use `GET` USERS functions:**
 - Select **GET** mapping and enter the URL for commands 'GET all users' / 'GET user by user id' listed in the users command table above to get all users or individual users via id.
 <img src= ./example_code/getallusers.png>
 <br />
 
-**6. To use `POST` USERS function:**
+**7. To use `POST` USERS function:**
 - Select **POST** mapping and enter the URL for command 'POST new user' listed in the users command table above to add a user to the user list using the body. 
     - To access the body, select 'body' under the URL, then select raw and finally press the 'text' drop down menu and select JSON.
         - Within the body, fill in the properties of the new user as demonstrated in the image below.
@@ -167,7 +169,7 @@ If granted more time, we would like to develop more functions to create a more r
 
 ### ***EVENTS*** 🎉
 
-**7. To use `GET` EVENTS function:**
+**8. To use `GET` EVENTS function:**
 - Select **GET** mapping and enter the URL for commands 'GET all events'/'GET event by id' listed in the events command table above to get all events or individual events via id.
 <img src= ./example_code/eventbyid.png>
 <br />
@@ -180,14 +182,14 @@ If granted more time, we would like to develop more functions to create a more r
 <img src= ./example_code/daysuntil.png>
 <br />
 
-**8. To use `POST` EVENTS function:**
+**9. To use `POST` EVENTS function:**
 - Select **POST** mapping and enter the URL for command 'POST a new event' listed in the events command table above to add an event to the events list using the body as shown in the image below. Fill in the properties relating to the event and press send.
     - An id to the event will be provided and the event will now appear on the GET all events mapping when 'sending' the function again.
 
 <img src= ./example_code/postevent.png>
 <br />
 
-**9. To use `PATCH` EVENTS function:**
+**10. To use `PATCH` EVENTS function:**
 
 - Select **PATCH** mapping and enter the URL for command 'PATCH an event' listed in the events command table above to update an event with a new user.
 
@@ -202,7 +204,7 @@ If granted more time, we would like to develop more functions to create a more r
 <br />
 
 
-**10. To use `DELETE` EVENTS function:**
+**11. To use `DELETE` EVENTS function:**
 
 - Select DELETE mapping and enter the URL for command 'DELETE an event' listed in the events command table above to remove an event from the events list using an events id. 
 
