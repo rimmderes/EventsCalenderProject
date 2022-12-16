@@ -1,5 +1,7 @@
 # **Event Management System Project (BNTA COHORT 7)**
 
+## **SAWS Code Team**
+
 ### ***Collaborators*** ⭐
 - Rimm Deres (GitHub: [RimmDeres](https://github.com/rimmderes))
 - Rebecca Solomon (GitHub: [RebeccaSolomon](https://github.com/rebeccasolomon446))
@@ -8,7 +10,33 @@
 
 ### ***Project Overview*** 🚀
 
-- Our team had taken interest in apps and websites, such as EventBrite and Fatsoma, which present events for people to attend. We originally wanted to produce an individual calendar for users, however, we recognised that a booking system which can show the array of events one may have was better. We wanted our API to encompass a ranges of events, not limited to work meetings, networking events or personal affairs, but all. Thus, we chose to create an events booking system to include these all.
+ Our team had taken interest in apps and websites, such as EventBrite and Fatsoma, which present events for people to attend. We originally wanted to produce an individual calendar for users, however, we recognised that a booking system which can show the array of events one may have was better. We wanted our API to encompass a ranges of events, not limited to work meetings, networking events or personal affairs, but all. Thus, we chose to create an events booking system to include all of these.
+
+#### ***Drawbacks***
+Whilst completing the project, we faced a number of difficulties. 
+- One of our major issues was our git branch and merge errors as they were time consuming and deleted some code. We researched how to resolve the issue and soon completely understood and were able to effectively execute branch merges and commits.
+- Additionally, creating multiple route endpoints became an issue. We were unsure how to create the method and execute the function. Although we done research and were provided help which allowed us to create two different endpoints, 
+ we were unsure how to continue adding more.
+-  
+
+#### ***Technologies***
+
+ - Our API was coded in Java. We utilsed Git to commit our changes and contain our code in GitHub with our UML and ERD diagrams. The platform is extremely useful to track any changes we have made and roll back on any code. 
+<br />
+- SpringIntializr was imperative for us to use as we were able to implement dependencies which allowed us to utilise particular functions and commands. For instance, we utilised SpringBoot to implement the Spring framework, JPA to convert JSON and Java, and SQL to manage our relational databases and perform various operations on the data in them. Finally, we used postman to test our functions. These platforms allowed us to test our code and import a variety of functions which allowed us to create our tables and extend our beans (Examples: @JPARepositories, @Component etc).
+- Some of the challenges you faced and features you hope to implement in the future.
+
+#### ***Future***
+If granted more time, we would like to develop more functions to create a more realistic working app which is complemented by the front-end. These include:
+
+- Event Tags = categorising events to allow users to find events they would like to attend utilising enums and algorithms to recommend common interests to users.
+- Automation = remove events when the date of the event has passed. As we have not learned how to yet do this, this would require more research.
+- More properties = include features such as price and its corresponding endpoint.
+
+
+<br />
+
+
 
 ## **TABLE OF CONTENTS** 📖
 > 1. Project Timeline
@@ -43,7 +71,6 @@
 #### ***Entity Relationship Diagram (ERD)***
 
 <img src= ./diagrams1/ERD.png>
-
 <br />
 
 3. ### ***Dependencies*** ⚓
@@ -53,12 +80,6 @@
 - SpringBoot DevTools
 - PostgresSQL Driver
 <br />
-
-Our API was coded in Java. We utilsed Git to commit our changes and contain our code in GitHub with our UML and ERD diagrams. The platform is extremely useful to track any changes we have made and roll back on any code. 
-<br />
-SpringIntialzr was imperative for us to use as we were able to implement dependencies which allowed us to utilise particular functions and commands. For instance, we utilised SpringBoot to implement the Spring framework, JPA to convert JSON and Java, and SQL to manage our relational databases and perform various operations on the data in them. Finally, we used postman to test our functions. These platforms allowed us to test our code and import a variety of functions which allowed us to create our tables and extend our beans (Examples: @JPARepositories, @Component etc).
-<br />
-
 
  ### ***4. Commands*** 🫡
 
@@ -118,7 +139,6 @@ SpringIntialzr was imperative for us to use as we were able to implement depende
 
 **3. Open Postico to view Users and Events table with inputted information from the DataLoader.**
 <br />
-<br />
 
 **4. Open [Postman](https://www.postman.com/) to use GET, POST, PATCH and DELETE commands.**
 <br />
@@ -126,12 +146,12 @@ SpringIntialzr was imperative for us to use as we were able to implement depende
 
  ### ***USERS*** 💃
 
-**5. To use GET USERS functions:**
+**5. To use `GET` USERS functions:**
 - Select **GET** mapping and enter the URL for commands 'GET all users' / 'GET user by user id' listed in the users command table above to get all users or individual users via id.
 <img src= ./example_code/getallusers.png>
 <br />
 
-**6. To use POST USERS function:**
+**6. To use `POST` USERS function:**
 - Select **POST** mapping and enter the URL for command 'POST new user' listed in the users command table above to add a user to the user list. An id to the user will be provided and the user will now appear on the GET all users mapping when 'sending' the function again.
 <img src= ./example_code/adduser.png>
 
@@ -140,7 +160,7 @@ SpringIntialzr was imperative for us to use as we were able to implement depende
 
 ### ***EVENTS*** 🎉
 
-**7. To use GET EVENTS function:**
+**7. To use `GET` EVENTS function:**
 - Select **GET** mapping and enter the URL for commands 'GET all events'/'GET event by id' listed in the events command table above to get all events or individual events via id.
 <img src= ./example_code/eventbyid.png>
 <br />
@@ -153,12 +173,12 @@ SpringIntialzr was imperative for us to use as we were able to implement depende
 <img src= ./example_code/daysuntil.png>
 <br />
 
-**8. To use POST EVENTS function:**
+**8. To use `POST` EVENTS function:**
 - Select **POST** mapping and enter the URL for command 'POST a new event' listed in the events command table above to add an event to the events list. An id to the event will be provided and the event will now appear on the GET all events mapping when 'sending' the function again.
 <img src= ./example_code/postevent.png>
 <br />
 
-**9. To use PATCH EVENTS function:**
+**9. To use `PATCH` EVENTS function:**
 
 - Select **PATCH** mapping and enter the URL for command 'PATCH an event' listed in the events command table above to update an event with a new user.
 
@@ -173,7 +193,7 @@ SpringIntialzr was imperative for us to use as we were able to implement depende
 <br />
 
 
-**10. To use DELETE EVENTS function:**
+**10. To use `DELETE` EVENTS function:**
 
 - Select DELETE mapping and enter the URL for command 'DELETE an event' listed in the events command table above to remove an event from the events list using an events id. 
 
