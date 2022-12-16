@@ -189,6 +189,7 @@ If granted more time, we would like to develop more functions to create a more r
      - For example: the **PATCH** events table command is showing an update event id 1 (Paint N Sip). However, to update the event with a new user, the new users id must be entered in the body. 
      <br />
 
+    - To access the body, select 'body' under the URL, then select raw and finally press the 'text' drop down menu and select JSON.
     - > body: { “userId”: 6 }
     - Once the userID is sent, the user will be added to the event.
     - The user can now be found in the event's list of users, and the event in the user's list of events.
