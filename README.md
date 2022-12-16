@@ -158,7 +158,7 @@ If granted more time, we would like to develop more functions to create a more r
 **6. To use `POST` USERS function:**
 - Select **POST** mapping and enter the URL for command 'POST new user' listed in the users command table above to add a user to the user list using the body. 
     - To access the body, select 'body' under the URL, then select raw and finally press the 'text' drop down menu and select JSON.
-        - Within the body, fill in the name and email address of the new user as demonstrated in the image below.
+        - Within the body, fill in the properties of the new user as demonstrated in the image below.
     -  An id to the user will be provided and the user will now appear on the GET all users mapping when 'sending' the function again.
 <img src= ./example_code/adduser.png>
 
@@ -181,7 +181,7 @@ If granted more time, we would like to develop more functions to create a more r
 <br />
 
 **8. To use `POST` EVENTS function:**
-- Select **POST** mapping and enter the URL for command 'POST a new event' listed in the events command table above to add an event to the events list using the body as shown in the image below.
+- Select **POST** mapping and enter the URL for command 'POST a new event' listed in the events command table above to add an event to the events list using the body as shown in the image below. Fill in the properties relating to the event and press send.
     - An id to the event will be provided and the event will now appear on the GET all events mapping when 'sending' the function again.
 
 <img src= ./example_code/postevent.png>
@@ -194,7 +194,7 @@ If granted more time, we would like to develop more functions to create a more r
      - For example: the **PATCH** events table command is showing an update event id 1 (Paint N Sip). However, to update the event with a new user, the new users id must be entered in the body. 
      <br />
 
-    - > body: { “userId”: 6 }
+    - > body: { “userId”: 9 }
     - Once the userID is sent, the user will be added to the event.
     - The user can now be found in the event's list of users, and the event in the user's list of events.
     - However, if the events capacity has been reached, the user will not be added to the event accompained with a response declaring the event is full.
