@@ -11,6 +11,9 @@
 ### ***Project Overview*** 🚀
 
  Our team had taken interest in apps and websites, such as EventBrite and Fatsoma, which present events for people to attend. We originally wanted to produce an individual calendar for users, however, we recognised that a booking system which can show the array of events one may have was better. We wanted our API to encompass a ranges of events, not limited to work meetings, networking events or personal affairs, but all. Thus, we chose to create an events booking system to include all of these.
+ <br />
+
+ Our team name, *SAWS code*, relates to the seasons of the year (Summer,Autumn, Winter, Spring) to signify different periods of the calendar year. Additionally, as we have used Spring Boot, we believed it was appropriate that it too is included in our name.
 
 
 #### ***Technologies***
