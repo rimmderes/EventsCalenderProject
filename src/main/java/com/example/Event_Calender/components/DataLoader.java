@@ -33,7 +33,7 @@ public class DataLoader implements ApplicationRunner {
         // EVENTS
         // PAINT N SIP
         Event paintNSip = new Event("Paint N Sip", "Paint and Drink together", "Shoreditch",
-                LocalTime.of(19,00,00), LocalTime.of(22,00,00), LocalDate.of(2023,01,06), 3);
+                LocalTime.of(19,00,00), LocalTime.of(22,00,00), LocalDate.of(2023,03,06), 3);
         eventRepository.save(paintNSip);
 
         User rebecca = new User("Rebecca", "rebeccasol@gmail.com");
@@ -46,7 +46,7 @@ public class DataLoader implements ApplicationRunner {
 
         // PIZZA MAKING
         Event pizzaMaking = new Event("Pizza Making", "Making Pizza from scratch", "Covent Garden",
-                LocalTime.of(15,00,00), LocalTime.of(18,0,0), LocalDate.of(2022, 12, 16), 5);
+                LocalTime.of(15,00,00), LocalTime.of(18,0,0), LocalDate.of(2024, 12, 16), 5);
         eventRepository.save(pizzaMaking);
 
         User harry = new User("Harry", "harrym@gmail.com");
