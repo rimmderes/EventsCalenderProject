@@ -10,7 +10,7 @@
 
 ### ***Project Overview*** 🚀
 
- Our team had taken interest in apps and websites, such as EventBrite and Fatsoma, which present events for people to attend. We originally wanted to produce an individual calendar for users, however, we recognised that a booking system which can show the array of events one may have was better. We wanted our API to encompass a ranges of events, not limited to work meetings, networking events or personal affairs, but all. Thus, we chose to create an events booking system to include all of these.
+ Our team had taken interest in apps and websites, such as EventBrite and Fatsoma, which present events for people to attend. We originally wanted to produce an individual calendar for users, however, we decided we wanted our API to encompass a ranges of events, not limited to work meetings, networking events or personal affairs, but all. Thus, we chose to create an events booking system to include all of these.
  <br />
 
  Our team name, *SAWS code*, relates to the seasons of the year (Summer 🌞,Autumn 🍁, Winter ❄️, Spring 🌺 ) to signify different periods of the calendar year. Additionally, as we have used Spring Boot, we believed it was appropriate that it too is included in our name.
@@ -18,10 +18,10 @@
 
 #### ***Technologies*** 🔌
 
- - Our API was coded in Java. We utilsed Git to commit our changes and contain our code in GitHub with our UML and ERD diagrams. The platform is extremely useful to track any changes we have made and roll back on any code. 
+ - Our API was coded in Java. We utilsed Git to commit our changes and contain our code in GitHub with our UML and ERD diagrams. The platform was extremely useful to track any changes we have made and roll back on any code. 
 <br />
 
--  SpringIntializr was imperative for us to use as we were able to implement dependencies which allowed us to utilise particular functions and commands. For instance, we utilised SpringBoot to implement the Spring framework, JPA to convert JSON and Java, and SQL to manage our relational databases and perform various operations on the data in them. Finally, we used postman to test our functions. These platforms allowed us to test our code and import a variety of functions which allowed us to create our tables and extend our beans (Examples: @JPARepositories, @Component etc).
+-  SpringIntializr was imperative for us to use as we were able to implement dependencies which allowed us to utilise particular functions and commands. For instance, we utilised SpringBoot to implement the Spring framework, JPA to convert JSON and Java, and SQL to manage our relational databases and perform various operations on the data in them. Finally, we used postman to test our functions. These platforms allowed us to test our code and import a variety of functions to create our tables and extend our beans (Examples: @JPARepositories, @Component etc).
 
 
 #### ***Drawbacks*** 💔
@@ -33,7 +33,7 @@ Whilst completing the project, we faced a number of difficulties.
 #### ***Future*** 🔑
 If granted more time, we would like to develop more functions to create a more realistic working app which is complemented by the front-end. These include:
 
-- Event Tags = categorising events to allow users to find events they would like to attend utilising enums and algorithms to recommend common interests to users.
+- Event Tags = categorising events to allow users to find events they would like to attend through the use of enums and algorithms to recommend common interests to users.
 - Automation = remove events when the date of the event has passed. As we have not learned how to yet do this, this would require more research.
 - More properties = include features such as price and its corresponding endpoint.
 
@@ -51,7 +51,7 @@ If granted more time, we would like to develop more functions to create a more r
 
 ### ***1. Project Timeline*** 💡
 
-- Friday 09/12/2022 - Met with team to discuss ideas and started UML and ERD diagrams.
+- Friday 09/12/2022 - Met with the team to discuss ideas and started UML and ERD diagrams.
 - Monday 12/12/2022 - Completed our set MVP using IntelliJ and Git.
 - Tuesday 13/12/2022 - Began to complete extension tasks, getting event by id and date. Also debugging.
 - Wednesday 14/12/2022 - Completed functions for the days until the event and setting a capacity.
@@ -111,7 +111,7 @@ If granted more time, we would like to develop more functions to create a more r
 | GET | .../events | Display all events|
 | GET | .../events/1   | Find event by event id (i.e.: 1)|
 | GET | .../events?date=2023-01-06   | Find event by date (example:one of our event dates) |
-| GET | .../events/days-until/2   | Find out days until the event (i.e. event id = 2) |
+| GET | .../events/days-until/2   | Find days until the event (i.e. event id = 2) |
 
 2. **POST** EVENTS
 
@@ -153,12 +153,12 @@ If granted more time, we would like to develop more functions to create a more r
  ### ***USERS*** 💃
 
 **6. To use `GET` USERS functions:**
-- Select **GET** mapping and enter the URL for commands 'GET all users' / 'GET user by user id' listed in the users command table above to get all users or individual users via id.
+- Select **GET** mapping and enter the URL for commands 'GET (find) all users' / 'GET (find) user by user id' listed in the users command table above to get all users or individual users via id.
 <img src= ./example_code/getallusers.png>
 <br />
 
 **7. To use `POST` USERS function:**
-- Select **POST** mapping and enter the URL for command 'POST new user' listed in the users command table above to add a user to the user list using the body. 
+- Select **POST** mapping and enter the URL for command 'POST (add) new user' listed in the users command table above to add a user to the user list using the body. 
     - To access the body, select 'body' under the URL, then select raw and finally press the 'text' drop down menu and select JSON.
         - Within the body, fill in the properties of the new user as demonstrated in the image below.
     -  An id to the user will be provided and the user will now appear on the GET all users mapping when 'sending' the function again.
@@ -170,20 +170,20 @@ If granted more time, we would like to develop more functions to create a more r
 ### ***EVENTS*** 🎉
 
 **8. To use `GET` EVENTS function:**
-- Select **GET** mapping and enter the URL for commands 'GET all events'/'GET event by id' listed in the events command table above to get all events or individual events via id.
+- Select **GET** mapping and enter the URL for commands 'GET (find) all events'/'GET (find) event by id' listed in the events command table above to get all events or individual events via id.
 <img src= ./example_code/eventbyid.png>
 <br />
 
-- Select **GET** mapping and enter the URL for command 'GET event by date' listed in the events command table above to get an to find events on a particular date. The example date in the command table refers to the 'Paint N Sip' event, which appears upon sending the request.
+- Select **GET** mapping and enter the URL for command 'GET (find) event by date' listed in the events command table above to get an to find events on a particular date. The example date in the command table refers to the 'Paint N Sip' event, which appears upon sending the request.
 <img src= ./example_code/eventbydate.png>
 <br />
 
-- Select **GET** mapping and enter the URL for command 'GET days until event' listed in the events command table above to get the years/months/days until the event begins. Enter the id of the desired event to recieve the response. The example above refers to event 'Pizza Making' (id = 2).
+- Select **GET** mapping and enter the URL for command 'GET (find) days until event' listed in the events command table above to get the years/months/days until the event begins. Enter the id of the desired event to recieve the response. The example above refers to event 'Pizza Making' (id = 2).
 <img src= ./example_code/daysuntil.png>
 <br />
 
 **9. To use `POST` EVENTS function:**
-- Select **POST** mapping and enter the URL for command 'POST a new event' listed in the events command table above to add an event to the events list using the body as shown in the image below. Fill in the properties relating to the event and press send.
+- Select **POST** mapping and enter the URL for command 'POST (add) a new event' listed in the events command table above to add an event to the events list using the body as shown in the image below. Fill in the properties relating to the event and press send.
     - An id to the event will be provided and the event will now appear on the GET all events mapping when 'sending' the function again.
 
 <img src= ./example_code/postevent.png>
@@ -191,7 +191,7 @@ If granted more time, we would like to develop more functions to create a more r
 
 **10. To use `PATCH` EVENTS function:**
 
-- Select **PATCH** mapping and enter the URL for command 'PATCH an event' listed in the events command table above to update an event with a new user.
+- Select **PATCH** mapping and enter the URL for command 'PATCH (update) an event' listed in the events command table above to update an event with a new user.
 
      - For example: the **PATCH** events table command is showing an update event id 1 (Paint N Sip). However, to update the event with a new user, the new users id must be entered in the body. 
      <br />
