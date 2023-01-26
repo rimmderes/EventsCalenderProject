@@ -91,45 +91,45 @@ If granted more time, we would like to develop more functions to create a more r
 
 1. **GET** (SHOW) USERS
 
-| COMMAND | URL    |
-| :---:   | :---: | 
-| GET all users | localhost:8080/users   |
-| GET user by user id (i.e.: id = 1): | localhost:8080/users/1  |
+| Request Type | HTTP path | Description |
+| :---:   | :---: | :---: | 
+| GET | localhost:8080/users   | Find all users |
+| GET | localhost:8080/users/1  | Find user via id (i.e.: id = 1) |
 
 2. **POST** new user
 
-| COMMAND | URL    |
-| :---:   | :---: | 
-| POST new user | localhost:8080/users   |
+| Request Type | HTTP path | Description |
+| :---:   | :---: | :---: | 
+| POST | localhost:8080/users | Add a new user | 
 
 ## ***EVENTS***
 
 1. **GET** (SHOW) EVENTS
 
-| COMMAND | URL    |
-| :---:   | :---: | 
-| GET all events : | localhost:8080/events   |
-| GET event by event id (i.e. id = 1): | localhost:8080/events/1   |
-| GET event by date (example:one of our event dates): | localhost:8080/events?date=2023-01-06   |
-| GET days until event (with event id = 2): | localhost:8080/events/days-until/2   |
+| Request Type | HTTP path | Description | 
+| :---:   | :---: | :---: | 
+| GET | localhost:8080/events | Display all events|
+| GET | localhost:8080/events/1   | Find event by event id (i.e.: 1)|
+| GET | localhost:8080/events?date=2023-01-06   | Find event by date (example:one of our event dates) |
+| GET | localhost:8080/events/days-until/2   | Find out days until the event (i.e. event id = 2) |
 
 2. **POST** EVENTS
 
-| COMMAND | URL    |
-| :---:   | :---: | 
-| POST a new event: | localhost:8080/events  |
+| Request Type | HTTP path  | Description |
+| :---:   | :---: | :---: | 
+| POST | localhost:8080/events  | Add a new event | 
 
 3. **PATCH** Event
 
-| COMMAND | URL    |
-| :---:   | :---: | 
-| PATCH an event (i.e.: id = 1): | localhost:8080/events/1  |
+| Request Type | HTTP path | Description |
+| :---:   | :---: | :---: | 
+| PATCH  | localhost:8080/events/1  | Update an event (i.e.: id = 1) | 
 
 4. **DELETE** EVENTS
 
-| COMMAND | URL    |
-| :---:   | :---: | 
-| DELETE an event (i.e. id = 3): | localhost:8080/events/3  |
+| Request Type | HTTP path | Description |
+| :---:   | :---: | :---: | 
+| DELETE | localhost:8080/events/3  | Delete an event (i.e.: id = 3) | 
 <br />
 
 
@@ -137,7 +137,7 @@ If granted more time, we would like to develop more functions to create a more r
 
 **1. Install postgres via the [postgres website](https://www.postgresql.org/download/) or via [home brew](https://brew.sh/).**
 
-**2. Create a database in your desired location using terminal: 'createdb * *insert desired name* * '.**
+**2. Create a database in your desired location using terminal: 'createdb events_db'.**
 <br />
 
 **3. Run the API in the EventCalenderApplication class.** 
