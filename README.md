@@ -93,14 +93,14 @@ If granted more time, we would like to develop more functions to create a more r
 
 | Request Type | HTTP path | Description |
 | :---:   | :---: | :---: | 
-| GET | localhost:8080/users   | Find all users |
-| GET | localhost:8080/users/1  | Find user via id (i.e.: id = 1) |
+| GET | .../users   | Find all users |
+| GET | .../users/1  | Find user via id (i.e.: id = 1) |
 
 2. **POST** new user
 
 | Request Type | HTTP path | Description |
 | :---:   | :---: | :---: | 
-| POST | localhost:8080/users | Add a new user | 
+| POST | .../users | Add a new user | 
 
 ## ***EVENTS***
 
@@ -108,28 +108,28 @@ If granted more time, we would like to develop more functions to create a more r
 
 | Request Type | HTTP path | Description | 
 | :---:   | :---: | :---: | 
-| GET | localhost:8080/events | Display all events|
-| GET | localhost:8080/events/1   | Find event by event id (i.e.: 1)|
-| GET | localhost:8080/events?date=2023-01-06   | Find event by date (example:one of our event dates) |
-| GET | localhost:8080/events/days-until/2   | Find out days until the event (i.e. event id = 2) |
+| GET | .../events | Display all events|
+| GET | .../events/1   | Find event by event id (i.e.: 1)|
+| GET | .../events?date=2023-01-06   | Find event by date (example:one of our event dates) |
+| GET | .../events/days-until/2   | Find out days until the event (i.e. event id = 2) |
 
 2. **POST** EVENTS
 
 | Request Type | HTTP path  | Description |
 | :---:   | :---: | :---: | 
-| POST | localhost:8080/events  | Add a new event | 
+| POST | .../events  | Add a new event | 
 
 3. **PATCH** Event
 
 | Request Type | HTTP path | Description |
 | :---:   | :---: | :---: | 
-| PATCH  | localhost:8080/events/1  | Update an event (i.e.: id = 1) | 
+| PATCH  | .../events/1  | Update an event (i.e.: id = 1) | 
 
 4. **DELETE** EVENTS
 
 | Request Type | HTTP path | Description |
 | :---:   | :---: | :---: | 
-| DELETE | localhost:8080/events/3  | Delete an event (i.e.: id = 3) | 
+| DELETE | .../events/3  | Delete an event (i.e.: id = 3) | 
 <br />
 
 
